@@ -66,7 +66,7 @@ int main() {
 			}
 			else if (playclicked) {
 				level1.draw(window);
-				
+
 			}
 
 			window.display();
