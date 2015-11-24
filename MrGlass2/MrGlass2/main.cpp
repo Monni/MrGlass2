@@ -8,6 +8,9 @@
 // SFML 2.1 tutorial 51
 int main() {
 
+
+
+
 	bool playclicked = false;
 
 
@@ -35,13 +38,6 @@ int main() {
 					menu.MoveDown();
 					break;
 
-				case sf::Keyboard::Left:
-					level1.MoveUp();
-					break;
-
-				case sf::Keyboard::Right:
-					level1.MoveDown();
-					break;
 
 				case sf::Keyboard::Return:
 					switch (menu.GetPressedItem()) {

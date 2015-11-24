@@ -9,16 +9,16 @@ public:
 	~Level1();
 
 	void draw(sf::RenderWindow &window);
-	void MoveUp();
-	void MoveDown();
 	void init();
 	sf::Texture glassmantex;
 	Character glassman;
+	sf::Clock dClock;		// dClock FPS:stä riippumaton peliaika
 
 
 
 private:
 
 	sf::Font font;
+	const float GAME_SPEED = 200.0f;
 
 };

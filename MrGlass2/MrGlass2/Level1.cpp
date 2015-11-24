@@ -1,6 +1,7 @@
 #include "Level1.h"
 #include "character.h"
 
+
 Level1::Level1(float width, float height) {
 	init();
 }
@@ -21,13 +22,11 @@ void Level1::init() {
 void Level1::draw(sf::RenderWindow &window) {
 
 	window.draw(glassman);
+	glassman.checkmovement();
 
-}
+	// Pelinopeus FPS:stä riippumaton vakio
+	float d = dClock.restart().asSeconds();
+	float siirtyma = d * GAME_SPEED;
+	glassman.SetMoveSpeed(siirtyma);
 
-void Level1::MoveUp() {
-	glassman.moveLeft(); // testi
-}
-
-void Level1::MoveDown() {
-	glassman.moveRight(); //testi
 }

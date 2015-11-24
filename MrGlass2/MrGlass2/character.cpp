@@ -1,6 +1,7 @@
 #include "character.h"
 #include <string>
 #include "SFML/Graphics.hpp"
+#include <iostream>
 
 Character::Character() {}
 Character::~Character() {}
@@ -44,4 +45,23 @@ void Character::moveRight() {
 
 void Character::jump() {
 
+}
+
+void Character::SetMoveSpeed(float siirtyma) {
+	this->movespeed = siirtyma;
+}
+
+void Character::checkmovement() {
+	
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+			moveLeft();
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+			moveRight();
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+			std::cout << "ASDASDASD HYPPYPOMPPU KOIKKALOIKKA!!!!!/n";
+		}
+	
 }

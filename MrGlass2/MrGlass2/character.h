@@ -1,6 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include <string>
+
 class Character : public sf::RectangleShape {
 public:
 	float x;
@@ -14,10 +15,12 @@ public:
 	void moveLeft();
 	void moveRight();
 	void jump();
+	void checkmovement();
+	void SetMoveSpeed(float);
 
 protected:
 private:
-	float movespeed = 4;
+	float movespeed;
 	float jumpstart = 5;
 	float jumpmax = 5;
 
