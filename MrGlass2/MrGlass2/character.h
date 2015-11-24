@@ -3,19 +3,22 @@
 #include <string>
 class Character : public sf::RectangleShape {
 public:
-	int x;
-	int y;
+	float x;
+	float y;
 	int score;
 	Character();
 	~Character();
 	Character(std::string, float, float, sf::Texture *);  // Luo hahmo
 	void draw(sf::RenderWindow &window);
-	void getNextPosition(); //kaikelle liikkeelle
-	int getX();
+	void setData(std::string, float, float, sf::Texture *);
+	void moveLeft();
+	void moveRight();
+	void jump();
+
 protected:
 private:
-	int movespeed;
-	int jumpstart;
-	int jumpmax;
+	float movespeed = 4;
+	float jumpstart = 5;
+	float jumpmax = 5;
 
 };
