@@ -19,12 +19,12 @@ void LoadTileMap::init() {
 		{
 			std::string str;
 			openfile >> str;
-			char x = str[0], y = str[2];
-			if (!isdigit(x) || !isdigit(y))
+			char x = str[0], y = str[2]; //lukee 3 merkist‰ merkin 1 ja 3 jollois skippaa pilkun ja j‰tt‰‰ sen piirt‰m‰tt‰
+			if (!isdigit(x) || !isdigit(y)) 
 				map[loadCounter.x][loadCounter.y] = sf::Vector2i(-1, -1);
 			else
 				map[loadCounter.x][loadCounter.y] = sf::Vector2i(x - '0', y - '0');	// checkkaa onko numero, jos ei ole numero siirt‰‰ negatiiviseksi ykkˆseksi jottei mit‰‰n piirret‰.
-			if (openfile.peek() == '\n')
+			if (openfile.peek() == '\n') // rivin loputtua siirtyy toiselle
 			{
 				loadCounter.x = 0;
 				loadCounter.y++;
@@ -42,11 +42,11 @@ void LoadTileMap::Draw(sf::RenderWindow & window) {
 	{
 		for (int j = 0; j < loadCounter.y; j++)
 		{
-			if (map[i][j].x != -1 && map[i][j].y != -1)
+			if (map[i][j].x != -1 && map[i][j].y != -1) // jos arvo annettu, etsii palikan tilemapista
 			{
-				tiles.setPosition(i * 32, j * 32);
-				tiles.setTextureRect(sf::IntRect(map[i][j].x * 32, map[i][j].y * 32, 32, 32));
-				window.draw(tiles);
+				tiles.setPosition(i * 32, j * 32); // asettaa piirtopaikan
+				tiles.setTextureRect(sf::IntRect(map[i][j].x * 32, map[i][j].y * 32, 32, 32)); // etsii m‰‰r‰tyn palikan
+				window.draw(tiles); // piirt‰‰ sarake kerrallaan ylh‰‰lt‰ alasp‰in
 			}
 		}
 	}

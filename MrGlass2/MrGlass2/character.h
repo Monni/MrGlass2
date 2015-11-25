@@ -6,10 +6,14 @@ class Character : public sf::RectangleShape {
 public:
 	float x;
 	float y;
+	float bottom, left, right, top;
 	int score;
 	Character();
 	~Character();
 	Character(std::string, float, float, sf::Texture *);  // Luo hahmo
+	bool Collision(Character mrglass);
+
+	void Update();
 	void draw(sf::RenderWindow &window);
 	void setData(std::string, float, float, sf::Texture *);
 	void moveLeft();
