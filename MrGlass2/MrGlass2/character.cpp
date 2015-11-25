@@ -27,15 +27,6 @@ void Character::Update() {
 	top = getPosition().y;
 }
 
-bool Character::Collision(Character mrglass) {
-	if (right < mrglass.left || left > mrglass.right || top > mrglass.bottom || bottom < mrglass.top)
-	{
-		return false;
-	}
-	return true;
-}
-
-
 void Character::draw(sf::RenderWindow & window) {
 	window.draw(*this);
 }

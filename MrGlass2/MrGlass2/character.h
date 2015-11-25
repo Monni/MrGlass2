@@ -11,7 +11,6 @@ public:
 	Character();
 	~Character();
 	Character(std::string, float, float, sf::Texture *);  // Luo hahmo
-	bool Collision(Character mrglass);
 
 	void Update();
 	void draw(sf::RenderWindow &window);

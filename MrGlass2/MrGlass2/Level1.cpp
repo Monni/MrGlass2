@@ -29,4 +29,25 @@ void Level1::draw(sf::RenderWindow &window) {
 	float siirtyma = d * GAME_SPEED;
 	glassman.SetMoveSpeed(siirtyma);
 
+	glassman.Update();
+
+	for (int i = 0; i < colMap.size(); i++) {
+		for (int j = 0; j < colMap[i].size(); j++) {
+			if (colMap[i][j] == 1) {
+				int bottom, top, left, right;
+				bottom = i * 32 + 32;
+				top = i * 32;
+				right = j * 32 + 32;
+				left = j * 32;
+
+				if (glassman.right < left || glassman.left > right || glassman.top > bottom || glassman.bottom < top) {
+					glassman.setPosition(300, 400);
+				}
+				else {
+					break;
+				}
+			}
+		}
+	}
+
 }
