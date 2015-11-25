@@ -10,8 +10,36 @@ Level1::~Level1() {
 
 }
 
+void Level1::loadCollisionMap() {
+	std::ifstream openfile("colmap1.txt");
+	std::vector<int>tempMap;
+	colMap.clear();
+	if (openfile.is_open())
+	{
+
+		while (!openfile.eof())
+		{
+			std::string str, value;
+			std::getline(openfile, str);
+			std::stringstream stream(str);
+
+			while (std::getline(stream, value, ' ')) {
+				if (value.length() > 0) {
+					int a = atoi(value.c_str());
+					tempMap.push_back(a);
+				}
+			}
+			colMap.push_back(tempMap);
+			tempMap.clear();
+		}
+	}
+}
+
+
 void Level1::init() {
 	glassman.setData("glassman.png", 500, 300, &glassmantex);
+	loadCollisionMap();
+	//colMap.init();
 	/*
 	Level1 tilemap
 	Musiikit?
@@ -32,6 +60,7 @@ void Level1::draw(sf::RenderWindow &window) {
 	glassman.Update();
 
 	for (int i = 0; i < colMap.size(); i++) {
+		
 		for (int j = 0; j < colMap[i].size(); j++) {
 			if (colMap[i][j] == 1) {
 				int bottom, top, left, right;
@@ -41,9 +70,10 @@ void Level1::draw(sf::RenderWindow &window) {
 				left = j * 32;
 
 				if (glassman.right < left || glassman.left > right || glassman.top > bottom || glassman.bottom < top) {
-					glassman.setPosition(300, 400);
+					
 				}
 				else {
+					init();
 					break;
 				}
 			}
