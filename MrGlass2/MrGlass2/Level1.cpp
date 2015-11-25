@@ -20,7 +20,7 @@ void Level1::init() {
 }
 
 void Level1::draw(sf::RenderWindow &window) {
-
+	lvl1.Draw(window);
 	window.draw(glassman);
 	glassman.checkmovement();
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "character.h"
+#include "loadTileMap.h"
 
 
 class Level1 {
@@ -12,6 +13,7 @@ public:
 	void init();
 	sf::Texture glassmantex;
 	Character glassman;
+	LoadTileMap lvl1;
 	sf::Clock dClock;		// dClock FPS:stä riippumaton peliaika
 
 
