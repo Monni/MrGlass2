@@ -37,7 +37,7 @@ void Level1::loadCollisionMap() {
 
 
 void Level1::init() {
-	glassman.setData("glassman.png", 500, 300, &glassmantex);
+	glassman.setData("glassman.png", 300, 300, &glassmantex);
 	loadCollisionMap();
 	//colMap.init();
 	/*
@@ -70,9 +70,10 @@ void Level1::draw(sf::RenderWindow &window) {
 				left = j * 32;
 
 				if (glassman.right < left || glassman.left > right || glassman.top > bottom || glassman.bottom < top) {
-					
+					// tässä ei osu mihinkään palikkaan.
 				}
 				else {
+					// liikkumisen esto hyvä toteuttaa booleaneilla
 					init();
 					break;
 				}
