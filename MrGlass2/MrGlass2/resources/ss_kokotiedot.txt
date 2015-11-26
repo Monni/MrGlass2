@@ -1,0 +1,2 @@
+glassman_spritesheet		18 x 39 px
+glassman_shatter_spritesheet	27 x 39 px
