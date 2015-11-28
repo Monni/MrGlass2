@@ -11,7 +11,8 @@ public:
 	Character();
 	~Character();
 	Character(std::string, float, float, sf::Texture *);  // Luo hahmo
-
+	
+	void stopjump();
 	void Update();
 	void draw(sf::RenderWindow &window);
 	void setData(std::string, float, float, sf::Texture *);

@@ -52,8 +52,8 @@ void Character::moveRight() {
 	setPosition(getPosition() + sf::Vector2f(movespeed, 0));
 }
 
-void Character::jump() {
-	
+void Character::stopjump() {
+	isJumping = false;
 }
 
 void Character::SetMoveSpeed(float siirtyma) {

@@ -98,7 +98,7 @@ void Level1::draw(sf::RenderWindow &window) {
 						//p‰‰ osuu kattoon
 						glassman.setPosition(105, 500);
 						cout << "bottom collision" << endl;
-
+						glassman.stopjump();
 					}
 
 					// liikkumisen esto hyv‰ toteuttaa booleaneilla
