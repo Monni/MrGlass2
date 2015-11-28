@@ -1,7 +1,9 @@
 #include "Level1.h"
 #include "character.h"
 #include <sstream>
+#include <iostream>
 
+using namespace std;
 
 
 Level1::Level1(float width, float height) {
@@ -62,7 +64,7 @@ void Level1::draw(sf::RenderWindow &window) {
 	glassman.Update();
 
 	for (int i = 0; i < colMap.size(); i++) {
-		
+
 		for (int j = 0; j < colMap[i].size(); j++) {
 			if (colMap[i][j] == 1) {
 				int bottom, top, left, right;
@@ -74,10 +76,37 @@ void Level1::draw(sf::RenderWindow &window) {
 				if (glassman.right < left || glassman.left > right || glassman.top > bottom || glassman.bottom < top) {
 					// tässä ei osu mihinkään palikkaan.
 				}
+
 				else {
+
+					if (glassman.right > right) {
+						//glassmanin vasen reuna osuu seinän oikeaan reunaan
+						glassman.setPosition(200, 200);
+						cout << "right collision" << glassman.left << endl << right;
+					}
+					else if (glassman.left < left) {
+						cout << "left collision" << endl;
+						//glassmanin oikea reuna osuu seinän vasempaan reunaan
+						glassman.setPosition(300, 100);
+					}
+					else if (glassman.top > top) {
+						cout << "top collision" << endl;
+						// jalat osuu maahan
+						glassman.setPosition(305, 500);
+					}
+					else if (glassman.bottom < bottom) {
+						//pää osuu kattoon
+						glassman.setPosition(105, 500);
+						cout << "bottom collision" << endl;
+
+					}
+
 					// liikkumisen esto hyvä toteuttaa booleaneilla
-					init();
-					break;
+
+					else {
+
+						break;
+					}
 				}
 			}
 		}
