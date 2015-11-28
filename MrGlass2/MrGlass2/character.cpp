@@ -73,8 +73,9 @@ void Character::checkmovement() {
 		moveRight();
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !isJumping) {
 		isJumping = true;
+		jumpspeedchecked = false;
 	}
 
 	if (isJumping) {
