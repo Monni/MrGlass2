@@ -1,2 +1,4 @@
 glassman_spritesheet		18 x 39 px
 glassman_shatter_spritesheet	27 x 39 px
+grassworld_spritesheet		30 x 30 px
+metalworld_spritesheet		30 x 30 px
