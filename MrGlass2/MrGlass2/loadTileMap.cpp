@@ -44,8 +44,8 @@ void LoadTileMap::Draw(sf::RenderWindow & window) {
 		{
 			if (map[i][j].x != -1 && map[i][j].y != -1) // jos arvo annettu, etsii palikan tilemapista
 			{
-				tiles.setPosition(i * 32, j * 32); // asettaa piirtopaikan
-				tiles.setTextureRect(sf::IntRect(map[i][j].x * 32, map[i][j].y * 32, 32, 32)); // etsii m‰‰r‰tyn palikan
+				tiles.setPosition(i * 30, j * 30); // asettaa piirtopaikan
+				tiles.setTextureRect(sf::IntRect(map[i][j].x * 30, map[i][j].y * 30, 30, 30)); // etsii m‰‰r‰tyn palikan
 				window.draw(tiles); // piirt‰‰ sarake kerrallaan ylh‰‰lt‰ alasp‰in
 			}
 		}

@@ -1,5 +1,7 @@
 #include "Level1.h"
 #include "character.h"
+#include <sstream>
+
 
 
 Level1::Level1(float width, float height) {
@@ -37,7 +39,7 @@ void Level1::loadCollisionMap() {
 
 
 void Level1::init() {
-	glassman.setData("glassman.png", 300, 300, &glassmantex);
+	glassman.setData("glassman.png", 300, 200, &glassmantex);
 	loadCollisionMap();
 	//colMap.init();
 	/*
@@ -64,10 +66,10 @@ void Level1::draw(sf::RenderWindow &window) {
 		for (int j = 0; j < colMap[i].size(); j++) {
 			if (colMap[i][j] == 1) {
 				int bottom, top, left, right;
-				bottom = i * 32 + 32;
-				top = i * 32;
-				right = j * 32 + 32;
-				left = j * 32;
+				bottom = i * 30 + 30;
+				top = i * 30;
+				right = j * 30 + 30;
+				left = j * 30;
 
 				if (glassman.right < left || glassman.left > right || glassman.top > bottom || glassman.bottom < top) {
 					// tässä ei osu mihinkään palikkaan.

@@ -125,7 +125,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="character.cpp" />
-    <ClCompile Include="CollisionMap.cpp" />
     <ClCompile Include="Level1.cpp" />
     <ClCompile Include="loadTileMap.cpp" />
     <ClCompile Include="main.cpp" />
@@ -133,7 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.h" />
-    <ClInclude Include="CollisionMap.h" />
     <ClInclude Include="Level1.h" />
     <ClInclude Include="loadTileMap.h" />
     <ClInclude Include="Menu.h" />

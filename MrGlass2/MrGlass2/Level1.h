@@ -2,7 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include "character.h"
 #include "loadTileMap.h"
-#include "CollisionMap.h"
+
 
 
 class Level1 {
@@ -15,7 +15,6 @@ public:
 	Character glassman;
 	LoadTileMap lvl1;
 	std::vector<std::vector<int>> colMap;
-	//CollisionMap colMap1;
 	sf::Clock dClock;		// dClock FPS:stä riippumaton peliaika
 	void loadCollisionMap();
 
