@@ -2,8 +2,10 @@
 #include <string>
 #include "SFML/Graphics.hpp"
 #include <iostream>
+#include <vector>
 
 Character::Character() {}
+
 Character::~Character() {}
 
 /*
@@ -51,24 +53,43 @@ void Character::moveRight() {
 }
 
 void Character::jump() {
-
+	
 }
 
 void Character::SetMoveSpeed(float siirtyma) {
 	this->movespeed = siirtyma;
+	this->jumpspeed = -siirtyma * 2;
+	this->jumpreducer = siirtyma / 250;
+	this->maxfallspeed = siirtyma * 2.5;
 }
 
 void Character::checkmovement() {
-	
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-			moveLeft();
-		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-			moveRight();
-		}
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-			std::cout << "ASDASDASD HYPPYPOMPPU KOIKKALOIKKA!!!!!/n";
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
+		moveLeft();
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
+		moveRight();
+	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+		isJumping = true;
+	}
+
+	if (isJumping) {
+		if (!jumpspeedchecked) {
+			currentjumpspeed = jumpspeed;
+			jumpspeedchecked = true;
 		}
+		setPosition(getPosition() + sf::Vector2f(0, currentjumpspeed));
+		if (currentjumpspeed <= maxfallspeed) {
+			currentjumpspeed += jumpreducer;
+		}
+	}
+
+	
+	
+
 	
 }

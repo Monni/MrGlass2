@@ -2,7 +2,7 @@
 //////// TÄRKEÄ PÄIVITTÄÄ JOTTA OLISI HELPPO ALOITTAA SEURAAVAA AIHETTA///////////
 //////////////////////////////////////////////////////////////////////////////////
 
-Mrglass kuvat spritesheetiksi.
-Booleanit liikkumiselle.
-Hyppy/Gravitaatio.
-Collisionin tarkistaminen sivukerrallaan (nyt katsoo jos vaik osuu collisionmappiin).
+- DONE "M"	//Mrglass kuvat spritesheetiksi.
+-	 	Booleanit liikkumiselle.
+- DONE "M"	//Hyppy/Gravitaatio.
+-		Collisionin tarkistaminen sivukerrallaan (nyt katsoo jos vaik osuu collisionmappiin).

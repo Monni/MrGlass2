@@ -24,7 +24,21 @@ public:
 protected:
 private:
 	float movespeed;
+	float jumpspeed;
+	float currentjumpspeed;
+	float jumpreducer;
+	float maxfallspeed;
+
+
+
 	float jumpstart = 5;
 	float jumpmax = 5;
+
+	bool isJumping = false;
+	bool isFalling = false;
+	bool jumpspeedchecked = false;
+
+
+
 
 };
