@@ -78,30 +78,42 @@ void Level1::draw(sf::RenderWindow &window) {
 				}
 
 				else {
+					if (glassman.top < top) {
+						cout << "top collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
+							<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
+							<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
+							<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+						// jalat osuu maahan
+						glassman.stopjump();
+						glassman.setPosition(550, 550);
+					}
+					else if (glassman.bottom > bottom) {
+						//p‰‰ osuu kattoon
 
+						glassman.setPosition(550, 350);
+						cout << "bottom collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
+							<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
+							<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
+							<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+
+					}
 					if (glassman.right > right) {
 						//glassmanin vasen reuna osuu sein‰n oikeaan reunaan
-						glassman.setPosition(200, 200);
-						cout << "right collision" << glassman.left << endl << right;
+
+						glassman.setPosition(630, 450);
+						cout << "right collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
+							<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
+							<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
+							<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
 					}
 					else if (glassman.left < left) {
-						cout << "left collision" << endl;
+						cout << "left collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
+							<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
+							<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
+							<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
 						//glassmanin oikea reuna osuu sein‰n vasempaan reunaan
-						glassman.setPosition(300, 100);
+						glassman.setPosition(500, 450);
 					}
-					else if (glassman.top > top) {
-						cout << "top collision" << endl;
-						// jalat osuu maahan
-						glassman.setPosition(305, 500);
-					}
-					else if (glassman.bottom < bottom) {
-						//p‰‰ osuu kattoon
-						glassman.setPosition(105, 500);
-						cout << "bottom collision" << endl;
-						glassman.stopjump();
-					}
-
-					// liikkumisen esto hyv‰ toteuttaa booleaneilla
 
 					else {
 
