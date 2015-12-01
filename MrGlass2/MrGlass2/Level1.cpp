@@ -97,7 +97,7 @@ void Level1::draw(sf::RenderWindow &window) {
 							<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
 
 					}
-					if (glassman.right > right) {
+					if (glassman.right -15 > right+2) {
 						//glassmanin vasen reuna osuu seinän oikeaan reunaan
 
 						glassman.setPosition(630, 450);
@@ -106,7 +106,7 @@ void Level1::draw(sf::RenderWindow &window) {
 							<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
 							<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
 					}
-					else if (glassman.left < left) {
+					else if (glassman.left +15 < left-2) {
 						cout << "left collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
 							<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
 							<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
