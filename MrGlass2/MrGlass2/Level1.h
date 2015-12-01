@@ -24,4 +24,6 @@ private:
 
 	sf::Font font;
 	const float GAME_SPEED = 200.0f;
+
+	int collisioncounter = 0;
 };

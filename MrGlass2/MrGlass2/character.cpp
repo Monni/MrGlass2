@@ -53,7 +53,8 @@ void Character::moveRight() {
 }
 
 void Character::stopjump() {
-	isJumping = false;
+	this->isJumping = false;
+	this->jumpspeedchecked = false;
 }
 
 void Character::SetMoveSpeed(float siirtyma) {
@@ -61,8 +62,15 @@ void Character::SetMoveSpeed(float siirtyma) {
 	this->jumpspeed = -0.4 * 1.5;
 	this->jumpreducer = siirtyma / 250;
 	this->maxfallspeed = siirtyma * 2.5;
-	std::cout << siirtyma << std::endl;
 }
+
+
+void Character::setFalling(bool falling) {
+	this->isFalling = falling;
+	if (falling == false)
+		fallspeedchecked = false;
+}
+
 
 void Character::checkmovement() {
 
@@ -75,23 +83,34 @@ void Character::checkmovement() {
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !isJumping) {
-		isJumping = true;
+		this->isJumping = true;
 		jumpspeedchecked = false;
 	}
 
 	if (isJumping) {
 		if (!jumpspeedchecked) {
-			currentjumpspeed = jumpspeed;
+			fallspeed = jumpspeed;
 			jumpspeedchecked = true;
 		}
-		setPosition(getPosition() + sf::Vector2f(0, currentjumpspeed));
-		if (currentjumpspeed <= maxfallspeed) {
-			currentjumpspeed += jumpreducer;
+		setPosition(getPosition() + sf::Vector2f(0, fallspeed));
+		if (fallspeed <= maxfallspeed) {
+			fallspeed += jumpreducer;
 		}
 	}
 
-	
-	
+	if (isFalling && !isJumping) {
+		if (!fallspeedchecked) {
+			fallspeed = 0;
+			fallspeedchecked = true;
+		}
+		setPosition(getPosition() + sf::Vector2f(0, fallspeed));
+		if (fallspeed <= maxfallspeed) {
+			fallspeed += jumpreducer;
+		}
+	}
 
-	
+
+
+
+
 }

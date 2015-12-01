@@ -1,21 +1,16 @@
-﻿Build started 1.12.2015 18:39:23.
-     1>Project "\\storage\homes\H8593\Dox\Desktop\MrGlass2\MrGlass2\MrGlass2\MrGlass2.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"D:\MrGlass2\SFML-32\SFML-2.3.2\include" /I"C:\SFML-2.3.2\include" /I"Z:\SFML-32\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt character.cpp
-         character.cpp
-     1>\\storage\homes\h8593\dox\desktop\mrglass2\mrglass2\mrglass2\character.cpp(61): warning C4305: '=': truncation from 'double' to 'float'
-     1>\\storage\homes\h8593\dox\desktop\mrglass2\mrglass2\mrglass2\character.cpp(63): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\storage\homes\H8593\Dox\Desktop\MrGlass2\MrGlass2\Debug\MrGlass2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"C:\SFML-2.3.2\lib" /LIBPATH:"Z:\SFML-32\SFML-2.3.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"\\storage\homes\H8593\Dox\Desktop\MrGlass2\MrGlass2\Debug\MrGlass2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\storage\homes\H8593\Dox\Desktop\MrGlass2\MrGlass2\Debug\MrGlass2.lib" /MACHINE:X86 Debug\character.obj
+﻿Build started 1.12.2015 19:15:42.
+     1>Project "D:\MR\MrGlass2\MrGlass2\MrGlass2\MrGlass2.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MR\MrGlass2\MrGlass2\Debug\MrGlass2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"C:\SFML-2.3.2\lib" /LIBPATH:"Z:\SFML-32\SFML-2.3.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\MR\MrGlass2\MrGlass2\Debug\MrGlass2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MR\MrGlass2\MrGlass2\Debug\MrGlass2.lib" /MACHINE:X86 Debug\character.obj
          Debug\Enemy.obj
          Debug\Level1.obj
          Debug\loadTileMap.obj
          Debug\main.obj
          Debug\Menu.obj
          Debug\Spike.obj
-         MrGlass2.vcxproj -> \\storage\homes\H8593\Dox\Desktop\MrGlass2\MrGlass2\Debug\MrGlass2.exe
-     1>Done Building Project "\\storage\homes\H8593\Dox\Desktop\MrGlass2\MrGlass2\MrGlass2\MrGlass2.vcxproj" (Build target(s)).
+         MrGlass2.vcxproj -> D:\MR\MrGlass2\MrGlass2\Debug\MrGlass2.exe
+     1>Done Building Project "D:\MR\MrGlass2\MrGlass2\MrGlass2\MrGlass2.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.56
+Time Elapsed 00:00:00.39
