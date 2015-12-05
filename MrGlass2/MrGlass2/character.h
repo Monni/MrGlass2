@@ -44,11 +44,11 @@ private:
 	bool lastright = false;
 	bool movingleft = false;
 	bool movingright = false;
-	
+
 	sf::Image img;
 	sf::Image runningleft;
 	sf::Image runningright;
 	sf::Image standingleft;
 	sf::Image standingright;
-		
+
 };

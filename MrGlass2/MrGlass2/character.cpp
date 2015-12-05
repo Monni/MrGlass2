@@ -49,7 +49,8 @@ void Character::updateimg(sf::Texture * tex) {
 	if (movingleft) {
 		runningleft.loadFromFile("resources/glassman_left_running.gif");
 		tex->loadFromImage(runningleft);
-	} else if (movingright) {
+	}
+	else if (movingright) {
 		runningright.loadFromFile("resources/glassman_right_running.gif");
 		tex->loadFromImage(runningright);
 	}
@@ -57,7 +58,8 @@ void Character::updateimg(sf::Texture * tex) {
 	if (lastleft) {
 		standingleft.loadFromFile("resources/glassman_left_standing.gif");
 		tex->loadFromImage(standingleft);
-	} else if (lastright) {
+	}
+	else if (lastright) {
 		standingright.loadFromFile("resources/glassman_right_standing.gif");
 		tex->loadFromImage(standingright);
 	}
@@ -73,7 +75,7 @@ void Character::moveLeft() {
 	lastright = false;
 	movingright = false;
 
-	
+
 }
 
 void Character::moveRight() {
@@ -82,7 +84,7 @@ void Character::moveRight() {
 	lastleft = false;
 	movingright = true;
 	lastright = true;
-	
+
 }
 
 void Character::stopjump() {
@@ -115,9 +117,10 @@ void Character::checkmovement() {
 		movingleft = false;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
 		moveRight();
-	} else
+	}
+	else
 		movingright = false;
-	
+
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !isJumping) {
 		this->isJumping = true;
