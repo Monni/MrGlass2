@@ -10,12 +10,10 @@ public:
 	void update();
 	void draw(sf::RenderWindow &window);
 	void checkCollision();
+	float bottom, top, left, right;
 
 private:
-	float bottom;
-	float top;
-	float left;
-	float right;
+
 	float y;
 	float x;
 	float movespeed = 1;

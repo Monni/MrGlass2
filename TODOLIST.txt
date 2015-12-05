@@ -3,6 +3,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 - DONE "M"	//Mrglass kuvat spritesheetiksi.
--	 	Booleanit liikkumiselle.
+
 - DONE "M"	//Hyppy/Gravitaatio.
--		Collisionin tarkistaminen sivukerrallaan (nyt katsoo jos vaik osuu collisionmappiin).
+
+- Vaiheessaan, top toimii hyvin, mutta sivut vielä kysymysmerkki	//Collisionin tarkistaminen sivukerrallaan (nyt katsoo jos vaik osuu collisionmappiin).
+
+- Objektit tehty, taulukko puuttuu  // Pointteri Enemy taulukko (vektori taulukko pushbackillä?)
+
+//Glasmanin hajoaminen
+
+		

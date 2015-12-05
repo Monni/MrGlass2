@@ -42,6 +42,7 @@ void Level1::loadCollisionMap() {
 
 void Level1::init() {
 	glassman.setData("glassman.png", 300, 200, &glassmantex);
+	spike.setEnemyData("resources/spike.png", 500, 600, &spiketex);
 	loadCollisionMap();
 	//colMap.init();
 	/*
@@ -54,6 +55,7 @@ void Level1::init() {
 void Level1::draw(sf::RenderWindow &window) {
 	lvl1.Draw(window);
 	window.draw(glassman);
+	window.draw(spike);
 	glassman.checkmovement();
 
 	glassman.updateimg(&glassmantex);
@@ -62,8 +64,15 @@ void Level1::draw(sf::RenderWindow &window) {
 	float d = dClock.restart().asSeconds();
 	float siirtyma = d * GAME_SPEED;
 	glassman.SetMoveSpeed(siirtyma);
-
+	spike.update();
 	glassman.Update();
+
+	if (spike.right < glassman.left || spike.left > glassman.right || spike.top > glassman.bottom || spike.bottom < glassman.top) {
+		// tässä ei osu mihinkään palikkaan.
+	}
+	else {
+		cout << "SPIKE OSUMA";
+	}
 
 	for (int i = 0; i < colMap.size(); i++) {
 

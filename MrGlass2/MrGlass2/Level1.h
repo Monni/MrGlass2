@@ -2,6 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include "character.h"
 #include "loadTileMap.h"
+#include "Spike.h"
 
 
 
@@ -13,6 +14,8 @@ public:
 	void init();
 	sf::Texture glassmantex;
 	Character glassman;
+	sf::Texture spiketex;
+	Spike spike;
 	LoadTileMap lvl1;
 	std::vector<std::vector<int>> colMap;
 	sf::Clock dClock;		// dClock FPS:stä riippumaton peliaika
