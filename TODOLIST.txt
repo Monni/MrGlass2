@@ -10,6 +10,7 @@
 
 - Objektit tehty, taulukko puuttuu  // Pointteri Enemy taulukko (vektori taulukko pushbackill‰?)
 
-//Glasmanin hajoaminen
-
+- DONE "M"	//Glassmanin hajoaminen, k‰‰ntyvyys
+		
+		Lis‰‰ mappeja, mapinvaihto 		<<--  MAPINVAIHTOON ODOTETAAN OBJEKTIPOINTTERIHƒSSƒKKƒƒ
 		
