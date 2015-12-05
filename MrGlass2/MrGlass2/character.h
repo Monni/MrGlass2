@@ -12,6 +12,7 @@ public:
 	~Character();
 	Character(std::string, float, float, sf::Texture *);  // Luo hahmo
 
+	void updateimg(sf::Texture *);
 	void stopjump();
 	void Update();
 	void draw(sf::RenderWindow &window);
@@ -31,8 +32,6 @@ private:
 	float jumpreducer;
 	float maxfallspeed;
 
-
-
 	float jumpstart = 5;
 	float jumpmax = 5;
 
@@ -41,8 +40,15 @@ private:
 	bool jumpspeedchecked = false;
 	bool fallspeedchecked = false;
 
-
-
-
-
+	bool lastleft = false;
+	bool lastright = false;
+	bool movingleft = false;
+	bool movingright = false;
+	
+	sf::Image img;
+	sf::Image runningleft;
+	sf::Image runningright;
+	sf::Image standingleft;
+	sf::Image standingright;
+		
 };
