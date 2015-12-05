@@ -23,6 +23,7 @@ public:
 	void checkmovement();
 	void SetMoveSpeed(float);
 	void setFalling(bool);
+	void shatter();
 
 protected:
 private:
@@ -44,6 +45,9 @@ private:
 	bool lastright = false;
 	bool movingleft = false;
 	bool movingright = false;
+
+	bool isCollisible = true;
+	bool collided = false;
 
 	sf::Image img;
 	sf::Image runningleft;

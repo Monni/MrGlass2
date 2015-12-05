@@ -103,6 +103,7 @@ void Level1::draw(sf::RenderWindow &window) {
 	}
 	else {
 		cout << "SPIKE OSUMA";
+		glassman.shatter();
 	}
 
 	for (int i = 0; i < colMap.size(); i++) {

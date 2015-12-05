@@ -88,8 +88,19 @@ void Character::moveRight() {
 }
 
 void Character::stopjump() {
-	this->isJumping = false;
-	this->jumpspeedchecked = false;
+	if (isCollisible) {
+		this->isJumping = false;
+		this->jumpspeedchecked = false;
+	}
+	else if (isCollisible && !collided) {
+		this->fallspeed = jumpspeed;
+		this->collided = true;
+	}
+}
+
+void Character::shatter() {
+	this->isJumping = true;
+	this->isCollisible = false;
 }
 
 void Character::SetMoveSpeed(float siirtyma) {
