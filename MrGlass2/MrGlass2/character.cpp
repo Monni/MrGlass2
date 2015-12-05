@@ -59,7 +59,7 @@ void Character::stopjump() {
 
 void Character::SetMoveSpeed(float siirtyma) {
 	this->movespeed = siirtyma;
-	this->jumpspeed = -0.4 * 1.5;
+	this->jumpspeed = -siirtyma * 2;
 	this->jumpreducer = siirtyma / 250;
 	this->maxfallspeed = siirtyma * 2.5;
 }
