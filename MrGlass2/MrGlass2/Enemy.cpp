@@ -5,7 +5,7 @@
 #include <vector>
 
 Enemy::Enemy() {}
-
+Enemy::Enemy(std::string imagename, float x, float y, sf::Texture * tex) {}
 Enemy::~Enemy() {}
 
 void Enemy::update() {

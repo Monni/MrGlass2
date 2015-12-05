@@ -5,6 +5,7 @@
 class Enemy : public sf::RectangleShape {
 public:
 	Enemy();
+	Enemy(std::string, float, float, sf::Texture *);
 	~Enemy();
 	void update();
 	void draw(sf::RenderWindow &window);

@@ -6,6 +6,8 @@
 
 Spike::Spike() {}
 
+Spike::Spike(std::string imagename, float x, float y, sf::Texture * tex) {}
+
 Spike::~Spike() {}
 
 void Spike::update() {

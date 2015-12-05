@@ -3,6 +3,7 @@
 #include "character.h"
 #include "loadTileMap.h"
 #include "Spike.h"
+#include "Enemy.h"
 
 
 
@@ -17,6 +18,8 @@ public:
 	sf::Texture spiketex;
 	Spike spike;
 	LoadTileMap lvl1;
+	//luodaan dynaaminen Enemy vektori
+	std::vector<Enemy*> enemies;
 	std::vector<std::vector<int>> colMap;
 	sf::Clock dClock;		// dClock FPS:stä riippumaton peliaika
 	void loadCollisionMap();

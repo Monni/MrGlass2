@@ -6,6 +6,7 @@
 class Spike : public Enemy {
 public:
 	Spike();
+	Spike(std::string, float, float, sf::Texture *);
 	~Spike();
 	void update();
 	void draw(sf::RenderWindow &window);
