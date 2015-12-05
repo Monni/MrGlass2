@@ -1,5 +1,6 @@
 #pragma once
 #include "SFML/Graphics.hpp"
+#include "ImgException.cpp"
 #include <string>
 
 class Character : public sf::RectangleShape {

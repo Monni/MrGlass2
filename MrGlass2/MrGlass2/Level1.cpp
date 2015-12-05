@@ -88,11 +88,14 @@ void Level1::draw(sf::RenderWindow &window) {
 //}
 	window.draw(spike);
 	glassman.checkmovement();
-
-	glassman.updateimg(&glassmantex);
-
+	try {
+		glassman.updateimg(&glassmantex);
+	}
+	catch (ImgException ex) { cout << ex.getMessage() << endl; }
+	
+	
 	// Pelinopeus FPS:stä riippumaton vakio
-	float d = dClock.restart().asSeconds();
+float d = dClock.restart().asSeconds();
 	float siirtyma = d * GAME_SPEED;
 	glassman.SetMoveSpeed(siirtyma);
 	spike.update();
