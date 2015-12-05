@@ -34,7 +34,7 @@ void Character::draw(sf::RenderWindow & window) {
 }
 
 void Character::setData(std::string imagename, float x, float y, sf::Texture * tex) {
-	sf::Image img;
+
 	img.loadFromFile(imagename);
 	img.createMaskFromColor(sf::Color::White);
 	tex->loadFromImage(img);
@@ -42,14 +42,47 @@ void Character::setData(std::string imagename, float x, float y, sf::Texture * t
 	this->setSize(sf::Vector2f(18, 39));
 	this->setPosition(x, y);
 	this->setTexture(tex);
+
 }
+
+void Character::updateimg(sf::Texture * tex) {
+	if (movingleft) {
+		runningleft.loadFromFile("resources/glassman_left_running.gif");
+		tex->loadFromImage(runningleft);
+	} else if (movingright) {
+		runningright.loadFromFile("resources/glassman_right_running.gif");
+		tex->loadFromImage(runningright);
+	}
+
+	if (lastleft) {
+		standingleft.loadFromFile("resources/glassman_left_standing.gif");
+		tex->loadFromImage(standingleft);
+	} else if (lastright) {
+		standingright.loadFromFile("resources/glassman_right_standing.gif");
+		tex->loadFromImage(standingright);
+	}
+
+}
+
+
 
 void Character::moveLeft() {
 	setPosition(getPosition() + sf::Vector2f(-movespeed, 0));
+	movingleft = true;
+	lastleft = true;
+	lastright = false;
+	movingright = false;
+
+	
 }
 
 void Character::moveRight() {
 	setPosition(getPosition() + sf::Vector2f(movespeed, 0));
+	movingleft = false;
+	lastleft = false;
+	movingright = true;
+	lastright = true;
+	
 }
 
 void Character::stopjump() {
@@ -78,9 +111,13 @@ void Character::checkmovement() {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
 		moveLeft();
 	}
+	else
+		movingleft = false;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
 		moveRight();
-	}
+	} else
+		movingright = false;
+	
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !isJumping) {
 		this->isJumping = true;

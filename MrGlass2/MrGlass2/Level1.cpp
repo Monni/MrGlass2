@@ -55,6 +55,7 @@ void Level1::draw(sf::RenderWindow &window) {
 	lvl1.Draw(window);
 	window.draw(glassman);
 	glassman.checkmovement();
+	glassman.updateimg(&glassmantex);
 
 	// Pelinopeus FPS:stä riippumaton vakio
 	float d = dClock.restart().asSeconds();
