@@ -126,6 +126,7 @@
   <ItemGroup>
     <ClCompile Include="character.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="goal.cpp" />
     <ClCompile Include="ImgException.cpp" />
     <ClCompile Include="Level1.cpp" />
     <ClCompile Include="loadTileMap.cpp" />
@@ -137,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="character.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="goal.h" />
     <ClInclude Include="Level1.h" />
     <ClInclude Include="loadTileMap.h" />
     <ClInclude Include="Menu.h" />

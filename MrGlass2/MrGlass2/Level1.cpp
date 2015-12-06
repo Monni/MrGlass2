@@ -44,6 +44,8 @@ void Level1::init() {
 	glassman.setData("glassman.png", 300, 200, &glassmantex);
 	loadCollisionMap();
 	
+	goal.setGoalLocation("resources/goal.png", 960, 570, &goaltex);
+	
 	// objektit menee dynaamiseen muistitaulukkoon
 	/*enemies.push_back(new Spike("resources/spike.png", 300, 600, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 340, 600, &spiketex));
@@ -68,6 +70,16 @@ void Level1::init() {
 void Level1::draw(sf::RenderWindow &window) {
 	lvl1.Draw(window);
 	window.draw(glassman);
+	window.draw(goal);
+
+	// Goal collision
+	goal.update();
+	if (goal.right < glassman.left || goal.left > glassman.right || goal.top > glassman.bottom || goal.bottom < glassman.top) {
+		// tässä ei osu mihinkään palikkaan.
+	}
+	else {
+		cout << "GOAAAAAAAAAAAL!";
+	}
 
 	//TESTI VEKTORI ILMAN POINTTERIA JA DYNAAMISTA VARAUSTA, TOIMII!!//
 	for (int i = 0; i < enemies2.size(); i++) {

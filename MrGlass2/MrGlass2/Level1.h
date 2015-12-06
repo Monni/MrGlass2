@@ -5,6 +5,7 @@
 #include "Spike.h"
 #include "Enemy.h"
 #include "Saw.h"
+#include "goal.h"
 
 
 
@@ -17,7 +18,8 @@ public:
 	sf::Texture glassmantex;
 	Character glassman;
 	sf::Texture spiketex;
-	
+	Goal goal;
+	sf::Texture goaltex;
 	sf::Texture sawtex;
 	LoadTileMap lvl1;
 	//luodaan dynaaminen Enemy vektori

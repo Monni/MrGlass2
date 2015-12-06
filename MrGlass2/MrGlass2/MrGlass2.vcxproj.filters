@@ -42,6 +42,9 @@
     <ClCompile Include="Saw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="goal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Menu.h">
@@ -63,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Saw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="goal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
