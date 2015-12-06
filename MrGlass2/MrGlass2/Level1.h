@@ -4,6 +4,7 @@
 #include "loadTileMap.h"
 #include "Spike.h"
 #include "Enemy.h"
+#include "Saw.h"
 
 
 
@@ -16,10 +17,12 @@ public:
 	sf::Texture glassmantex;
 	Character glassman;
 	sf::Texture spiketex;
-	Spike spike;
+	
+	sf::Texture sawtex;
 	LoadTileMap lvl1;
 	//luodaan dynaaminen Enemy vektori
 	std::vector<Enemy*> enemies;
+	std::vector<Enemy> enemies2;
 	std::vector<std::vector<int>> colMap;
 	sf::Clock dClock;		// dClock FPS:stä riippumaton peliaika
 	void loadCollisionMap();

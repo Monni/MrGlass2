@@ -131,6 +131,7 @@
     <ClCompile Include="loadTileMap.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Saw.cpp" />
     <ClCompile Include="Spike.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="Level1.h" />
     <ClInclude Include="loadTileMap.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Saw.h" />
     <ClInclude Include="Spike.h" />
   </ItemGroup>
   <ItemGroup>

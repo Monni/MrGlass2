@@ -43,50 +43,76 @@ void Level1::loadCollisionMap() {
 void Level1::init() {
 	glassman.setData("glassman.png", 300, 200, &glassmantex);
 	loadCollisionMap();
-	spike.setEnemyData("resources/spike.png", 500, 600, &spiketex);
+	
 	// objektit menee dynaamiseen muistitaulukkoon
-	enemies.push_back(new Spike("resources/spike.png", 400, 600, &spiketex));
-	enemies.push_back(new Spike("resources/spike.png", 300, 600, &spiketex));
-	enemies.push_back(new Spike("resources/spike.png", 350, 600, &spiketex));
-	//colMap.init();
-
-	/*
-	Level1 tilemap
-	Musiikit?
-	Möröt
+	/*enemies.push_back(new Spike("resources/spike.png", 300, 600, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 340, 600, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 800, 600, &spiketex));
 	*/
+
+	//VEKTORIN TÄYTTEET
+	Spike spike2;
+	spike2.setEnemyData("resources/spike.png", 300, 600, &spiketex);
+	enemies2.push_back(spike2);
+	Spike spike3;
+	spike3.setEnemyData("resources/spike.png", 340, 600, &spiketex);
+	enemies2.push_back(spike3);
+	Spike spike4;
+	spike4.setEnemyData("resources/spike.png", 800, 600, &spiketex);
+	enemies2.push_back(spike4);
+	Saw saw;
+	saw.setEnemyData("resources/saw.png", 880, 600, &sawtex);
+	enemies2.push_back(saw);
 }
 
 void Level1::draw(sf::RenderWindow &window) {
 	lvl1.Draw(window);
 	window.draw(glassman);
 
-	int p = 0;
-	
-
-	/*for (std::vector<Enemy*>::iterator it = enemies.begin(); it != enemies.end(); it++){
-		p++;
-		cout << p << endl;*/
-
-	//Pointteri Objektit löytyvät taulukosta
-		for (int i = 0; i < enemies.size(); i++) {
-			//window.draw(&enemies[i]);
-			cout << &enemies[i] << endl;
-			window.draw(**&(enemies[i]));
-		}
-		//window.draw(enemies[0]);
-
-		
-		
-		if (spike.right < glassman.left || spike.left > glassman.right || spike.top > glassman.bottom || spike.bottom < glassman.top) {
+	//TESTI VEKTORI ILMAN POINTTERIA JA DYNAAMISTA VARAUSTA, TOIMII!!//
+	for (int i = 0; i < enemies2.size(); i++) {
+		//vektorin piirto
+		window.draw(enemies2[i]);
+		//enemy sijaintien päivitys
+		enemies2[i].update();
+		if (enemies2[i].right < glassman.left || enemies2[i].left > glassman.right || enemies2[i].top > glassman.bottom || enemies2[i].bottom < glassman.top) {
 			// tässä ei osu mihinkään palikkaan.
 		}
 		else {
-			//cout << "SPIKE OSUMA!?!??!?!";
+			glassman.shatter();
+			cout << "SPIKE OSUMA!";
 		}
+	}
 
-//}
-	window.draw(spike);
+	// objectien piirtäminen ei onnistu, ARSKA APUA
+
+	/*for (std::vector<Enemy*>::iterator it = enemies.begin(); it != enemies.end(); it++){
+	(*&*it)->draw(window);
+
+	/*		for (unsigned int i = 0; i < enemies.size(); i++) {
+	enemies.at(i).draw(window);
+	}
+	//	std::vector<Enemy *&> Tempenemies;
+	//Pointteri Objektit löytyvät taulukosta
+	for (int i = 0; i < enemies.size(); i++) {
+	//window.draw(&enemies[i]);
+	enemies[i]->draw(window);
+	cout << &*enemies[i] << endl;
+	//enemies*[i]->draw(&window);
+	enemies[i]->update();
+	if (enemies[i]->right < glassman.left || enemies[i]->left > glassman.right || enemies[i]->top > glassman.bottom || enemies[i]->bottom < glassman.top) {
+	// tässä ei osu mihinkään palikkaan.
+	}
+	else {
+	cout << "SPIKE OSUMA!?!??!?!";
+	}
+
+	}
+
+
+
+	}*/
+
 	glassman.checkmovement();
 	try {
 		glassman.updateimg(&glassmantex);
@@ -98,16 +124,9 @@ void Level1::draw(sf::RenderWindow &window) {
 float d = dClock.restart().asSeconds();
 	float siirtyma = d * GAME_SPEED;
 	glassman.SetMoveSpeed(siirtyma);
-	spike.update();
+
 	glassman.Update();
 
-	if (spike.right < glassman.left || spike.left > glassman.right || spike.top > glassman.bottom || spike.bottom < glassman.top) {
-		// tässä ei osu mihinkään palikkaan.
-	}
-	else {
-		cout << "SPIKE OSUMA";
-		glassman.shatter();
-	}
 
 	for (int i = 0; i < colMap.size(); i++) {
 

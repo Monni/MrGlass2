@@ -8,8 +8,9 @@ public:
 	Enemy(std::string, float, float, sf::Texture *);
 	~Enemy();
 	void update();
+	float bottom, top, left, right;
 	void draw(sf::RenderWindow &window);
-	void setEnemyData(std::string, float, float, sf::Texture *);
+	//void setEnemyData(std::string, float, float, sf::Texture *);
 
 private:
 	float y;
