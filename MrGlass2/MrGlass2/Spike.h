@@ -5,18 +5,15 @@
 
 class Spike : public Enemy {
 public:
-	Spike();
-	Spike(std::string, float, float, sf::Texture *);
-	~Spike();
-	void update();
-	void draw(sf::RenderWindow &window);
-	void checkCollision();
+	Spike();														// Oletuskonstruktori
+	Spike(std::string, float, float, sf::Texture *);				// Overload-konstruktori
+	~Spike();														// Destruktori
+	void update();													// Olion sijainnin p‰ivitys
+	void draw(sf::RenderWindow &window);							// Olio piirtopinnalle
 	//float bottom, top, left, right;
-	void setEnemyData(std::string, float, float, sf::Texture *);
+	void setEnemyData(std::string, float, float, sf::Texture *);	// Olion attribuuttien m‰‰ritys
 
 private:
-
-	float y;
-	float x;
-	float movespeed = 1;
+	float y;														// Olion y-koordinaatti
+	float x;														// Olion x-koordinaatti
 };

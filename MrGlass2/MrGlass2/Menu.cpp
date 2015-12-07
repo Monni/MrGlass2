@@ -48,3 +48,7 @@ void Menu::MoveDown() {
 		menu[selectedItemIndex].setColor(sf::Color::Red);
 	}
 }
+
+int Menu::GetPressedItem() {
+	return selectedItemIndex;
+}

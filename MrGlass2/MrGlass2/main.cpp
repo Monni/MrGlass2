@@ -25,45 +25,50 @@ int main() {
 
 		/*if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) kyseinen termi ei nykäise liikkuessa
 		level1.MoveUp();*/
-		while (window.pollEvent(event)) {
-			switch (event.type) {
-			case sf::Event::KeyPressed:
-				switch (event.key.code) {
+			while (window.pollEvent(event)) {
+				switch (event.type) {
+				case sf::Event::KeyPressed:
+					switch (event.key.code) {
 
-				case sf::Keyboard::Up:
-					menu.MoveUp();
-					break;
-
-				case sf::Keyboard::Down:
-					menu.MoveDown();
-					break;
-
-
-				case sf::Keyboard::Return:
-					switch (menu.GetPressedItem()) {
-					case 0:
-						std::cout << "Play button has been pressed" << std::endl;
-						playclicked = true;
-
+					case sf::Keyboard::Up:
+						menu.MoveUp();
 						break;
-					case 1:
-						std::cout << "Options button has been pressed" << std::endl;
+
+					case sf::Keyboard::Down:
+						menu.MoveDown();
 						break;
-					case 2:
-						window.close();
+
+					case sf::Keyboard::Return:
+						switch (menu.GetPressedItem()) {
+						case 0:
+							if (!playclicked) {
+								std::cout << "Play button has been pressed" << std::endl;
+								playclicked = true;
+							}
+							break;
+						case 1:
+							if (!playclicked) {
+								std::cout << "Options button has been pressed" << std::endl;
+							}
+							break;
+						case 2:
+							if (!playclicked) {
+								window.close();
+							}
+							break;
+						}
+
 						break;
 					}
+					break;
 
+				case sf::Event::Closed:
+					window.close();
 					break;
 				}
-				break;
-
-			case sf::Event::Closed:
-				window.close();
-				break;
 			}
-		}
 
+		
 		window.clear();
 
 		if (!playclicked) {

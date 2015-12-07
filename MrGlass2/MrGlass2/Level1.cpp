@@ -41,7 +41,7 @@ void Level1::loadCollisionMap() {
 
 
 void Level1::init() {
-	glassman.setData("glassman.png", 300, 200, &glassmantex);
+	glassman.setData("glassman.png", 100, 200, &glassmantex);
 	loadCollisionMap();
 	
 	goal.setGoalLocation("resources/goal.png", 960, 570, &goaltex);

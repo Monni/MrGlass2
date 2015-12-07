@@ -5,7 +5,7 @@
 #include <vector>
 
 Goal::Goal() {}
-Goal::Goal(std::string imagename, float x, float y, sf::Texture * tex) {}
+
 Goal::~Goal() {}
 
 void Goal::update() {

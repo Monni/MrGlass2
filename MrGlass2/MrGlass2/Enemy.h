@@ -4,16 +4,16 @@
 
 class Enemy : public sf::RectangleShape {
 public:
-	Enemy();
-	Enemy(std::string, float, float, sf::Texture *);
-	~Enemy();
-	void update();
-	float bottom, top, left, right;
-	void draw(sf::RenderWindow &window);
+	Enemy();													// Oletuskonstruktori
+	Enemy(std::string, float, float, sf::Texture *);			// Konstruktori
+	~Enemy();													// Destruktori
+	void update();												// Hakee enemyn sijainnin
+	float bottom, top, left, right;								// Collisionin m‰‰rittely
+	void draw(sf::RenderWindow &window);						// Olio piirtopinnalle
 	//void setEnemyData(std::string, float, float, sf::Texture *);
 
 private:
-	float y;
-	float x;
+	float y;													// Olion y-koordinaatti
+	float x;													// Olion x-koordinaatti
 	float movespeed;
 };

@@ -6,18 +6,18 @@
 
 class Menu {
 public:
-	Menu(float width, float height);
-	~Menu();
+	Menu(float width, float height);						// Menun konstruktori
+	~Menu();												// Destruktori
 
-	void draw(sf::RenderWindow &window);
-	void MoveUp();
-	void MoveDown();
-	int GetPressedItem() { return selectedItemIndex; }
+	void draw(sf::RenderWindow &window);					// Menu piirtopinnalle
+	void MoveUp();											// Valitsijan liikutus ylöspäin
+	void MoveDown();										// Valitsijan liikutus alaspäin
+	int GetPressedItem();									// Menun valitun napin värjäys
 
 
 
 private:
-	int selectedItemIndex;
-	sf::Font font;
-	sf::Text menu[MAX_NUMBER_OF_ITEMS];
+	int selectedItemIndex;									// Valitun menutoiminnon laskuri
+	sf::Font font;											// Fonttiluokan olio
+	sf::Text menu[MAX_NUMBER_OF_ITEMS];						// Text-luokan taulukko-olio
 };

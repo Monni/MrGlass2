@@ -4,15 +4,14 @@
 
 class Goal : public sf::RectangleShape {
 public:
-	Goal();
-	Goal(std::string, float, float, sf::Texture *);
-	~Goal();
-	void update();
-	float bottom, top, left, right;
-	void draw(sf::RenderWindow &window);
-	void setGoalLocation(std::string, float, float, sf::Texture *);
+	Goal();																// Oletuskonstruktori
+	~Goal();															// Destruktori
+	void update();														// Olion sijainnin p‰ivitys
+	float bottom, top, left, right;										
+	void draw(sf::RenderWindow &window);								// Olio piirtopinnalle
+	void setGoalLocation(std::string, float, float, sf::Texture *);		// Olion attribuutien m‰‰ritys(kuva, x ja y sijainti, tekstuuri)
 
 private:
-	float y;
-	float x;
+	float y;															// Olion y-koordinaatti
+	float x;															// Olion x-koordinaatti
 };
