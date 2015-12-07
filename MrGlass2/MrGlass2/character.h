@@ -5,51 +5,50 @@
 
 class Character : public sf::RectangleShape {
 public:
-	float x;
-	float y;
-	float bottom, left, right, top;
+	float x;													// Glassmanin x-koordinaatti
+	float y;													// Glassmanin y-koordinaatti
+	float bottom, left, right, top;								// Sijainnit collisionia varten
 	int score;
-	Character();
-	~Character();
-	Character(std::string, float, float, sf::Texture *);  // Luo hahmo
+	Character();												// Oletuskonstruktori
+	~Character();												// Oletusdestruktori
+	void setData(std::string, float, float, sf::Texture *);		// Konstruktori. Kuva, x ja y sijainti, tekstuurin lataus
 
-	void updateimg(sf::Texture *);
-	void stopjump();
-	void Update();
-	void draw(sf::RenderWindow &window);
-	void setData(std::string, float, float, sf::Texture *);
-	void moveLeft();
-	void moveRight();
-	void jump();
-	void checkmovement();
-	void SetMoveSpeed(float);
-	void setFalling(bool);
-	void shatter();
+	void updateimg(sf::Texture *);								// Päivittää glassmanin texturen liikekomentojen muuttuessa
+	void stopjump();											// Maahan osuessa muuttaa hypyn booleania mahdollistaakseen uuden hyppäämisen
+	void Update();												// Glassmanin sijainnin päivitys collisionia varten
+	void moveLeft();											// Glassmanin liike vasemmalle + liikettä kuvaavien booleanien muutokset
+	void moveRight();											// Glassmanin liike oikealle + liikettä kuvaavien booleanien muutokset
+	void checkmovement();										// Tarkistetaan pelaajan näppäinpainallukset ja toimitaan sen mukaan. Tarkistaa myös hypyn ja painovoiman tilan ja liikuttaa glassmania sen mukaan
+	void SetMoveSpeed(float);									// Antaa glassmanin liikkeille pelinopeuden mukaisen nopeuden, FPS:sta riippumatta.
+	void setFalling(bool);										// Kutsutaan hypyn loputtua lopettaakseen putoaminen ja aloittaakseen uusi putoamisnopeuslaskuri
+	void shatter();												// Kutsutaan kun halutaan hajottaa glassman
 
 protected:
 private:
+	// Liikkumisnopeudet
 	float movespeed;
 	float jumpspeed;
 	float fallspeed;
 	float jumpreducer;
 	float maxfallspeed;
 
-	float jumpstart = 5;
-	float jumpmax = 5;
-
+	// Hyppyyn ja painovoimaan tarvittavat booleanit
 	bool isJumping = false;
 	bool isFalling = false;
 	bool jumpspeedchecked = false;
 	bool fallspeedchecked = false;
 
+	// Liikkeen booleanit kuvienpäivitystä varten
 	bool lastleft = false;
 	bool lastright = false;
 	bool movingleft = false;
 	bool movingright = false;
 
+	// Glassmanin hajoamista tukevat booleanit
 	bool isCollisible = true;
 	bool collided = false;
 
+	// Glassmanin kuvat eri asennoissa
 	sf::Image img;
 	sf::Image runningleft;
 	sf::Image runningright;

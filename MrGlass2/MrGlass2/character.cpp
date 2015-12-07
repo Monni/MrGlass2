@@ -29,10 +29,6 @@ void Character::Update() {
 	top = getPosition().y;
 }
 
-void Character::draw(sf::RenderWindow & window) {
-	window.draw(*this);
-}
-
 void Character::setData(std::string imagename, float x, float y, sf::Texture * tex) {
 
 	img.loadFromFile(imagename);
