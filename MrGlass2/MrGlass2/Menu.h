@@ -14,8 +14,6 @@ public:
 	void MoveDown();										// Valitsijan liikutus alaspäin
 	int GetPressedItem();									// Menun valitun napin värjäys
 
-
-
 private:
 	int selectedItemIndex;									// Valitun menutoiminnon laskuri
 	sf::Font font;											// Fonttiluokan olio

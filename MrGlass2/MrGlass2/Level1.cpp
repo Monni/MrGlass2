@@ -5,14 +5,11 @@
 
 using namespace std;
 
-
 Level1::Level1(float width, float height) {
 	init();
 }
 
-Level1::~Level1() {
-
-}
+Level1::~Level1() {}
 
 void Level1::loadCollisionMap() {
 	std::ifstream openfile("colmap1.txt");

@@ -10,7 +10,6 @@ public:
 	~Spike();														// Destruktori
 	void update();													// Olion sijainnin p‰ivitys
 	void draw(sf::RenderWindow &window);							// Olio piirtopinnalle
-	//float bottom, top, left, right;
 	void setEnemyData(std::string, float, float, sf::Texture *);	// Olion attribuuttien m‰‰ritys
 
 private:

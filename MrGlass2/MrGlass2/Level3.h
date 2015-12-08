@@ -7,8 +7,6 @@
 #include "Saw.h"
 #include "goal.h"
 
-
-
 class Level3 {
 public:
 	Level3(float width, float height);								// Konstruktori

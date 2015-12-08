@@ -11,7 +11,6 @@ public:
 	void update();													// P‰ivitt‰‰ olion sijainnin
 	void draw(sf::RenderWindow &window);							// Olio piirtopinnalle
 	void setEnemyData(std::string, float, float, sf::Texture *);	// Olion attribuuttien m‰‰ritys
-	//float bottom, top, left, right;
 
 private:
 
