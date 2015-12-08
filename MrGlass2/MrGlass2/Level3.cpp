@@ -52,6 +52,15 @@ void Level3::init() {
 	enemies.push_back(new Spike("resources/spike.png", 475, 210, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 536, 210, &spiketex));
 
+	enemies.push_back(new Spike("resources/spike.png", 441, 270, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 415, 270, &spiketex));
+	enemies.push_back(new Saw("resources/saw.png", 340, 270, &sawtex));
+
+	enemies.push_back(new Spike("resources/spike.png", 600, 390, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 625, 390, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 650, 390, &spiketex));
+
+
 	enemies.push_back(new Spike("resources/spike.png", 268, 691, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 298, 691, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 328, 691, &spiketex));
@@ -93,6 +102,7 @@ void Level3::draw(sf::RenderWindow &window) {
 	}
 	else {
 		level3finished = true;
+		window.close();
 	}
 
 	//Piirto looppi vektorille
