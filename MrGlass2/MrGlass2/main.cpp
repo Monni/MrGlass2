@@ -80,9 +80,8 @@ int main() {
 		}
 		else if (playclicked && !level1finished) {
 
-			level1.draw(window);
+			level2.draw(window);
 			level1finished = level1.checkstate();
-			std::cout << level1finished << std::endl;
 		
 		}
 		else if (playclicked && level1finished && !level2finished) {

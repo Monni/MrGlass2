@@ -41,17 +41,23 @@ void Level2::loadCollisionMap() {
 
 
 void Level2::init() {
-	glassman.setData("glassman.png", 100, 10, &glassmantex);
+	glassman.setData("glassman.png", 960, 400, &glassmantex);
 	loadCollisionMap();
-
-	goal.setGoalLocation("resources/goal.png", 960, 570, &goaltex);
+	glassman.setFalling(false);
+	goal.setGoalLocation("resources/goal.png", 20, 35, &goaltex);
 
 	// objektit menee dynaamiseen muistitaulukkoon
 //	enemies.push_back(new Spike("resources/spike.png", 300, 600, &spiketex));
 	//enemies.push_back(new Spike("resources/spike.png", 340, 600, &spiketex));
 	//enemies.push_back(new Spike("resources/spike.png", 800, 600, &spiketex));
 	//enemies.push_back(new Saw("resources/saw.png", 880, 600, &sawtex));
-
+	enemies.push_back(new Saw("resources/saw.png", 850, 270, &sawtex));
+	enemies.push_back(new Spike("resources/spike.png", 400, 60, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 748, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 778, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 808, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 838, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 862, 691, &spiketex));
 }
 
 bool Level2::checkstate() {
@@ -124,16 +130,10 @@ void Level2::draw(sf::RenderWindow &window) {
 				}
 
 				else {
-					if (glassman.top + 37 <= top && isFalling) {
-						/*	cout << "top collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
-						<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
-						<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
-						<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
-						// jalat osuu maahan*/
+					if (glassman.top + 35 <= top && isFalling) {
 						glassman.stopjump();
 						glassman.setFalling(false);
-						std::cout << top << endl;
-						cout << glassman.top << endl;
+
 					
 
 					}

@@ -23,6 +23,7 @@ public:
 	void setFalling(bool);										// Kutsutaan hypyn loputtua lopettaakseen putoaminen ja aloittaakseen uusi putoamisnopeuslaskuri
 	void shatter();												// Kutsutaan kun halutaan hajottaa glassman
 	bool checkFalling();
+	void FinishReset();
 
 protected:
 private:

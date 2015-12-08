@@ -49,8 +49,6 @@ void Level1::init() {
 	// objektit menee dynaamiseen muistitaulukkoon
 	enemies.push_back(new Spike("resources/spike.png", 300, 600, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 340, 600, &spiketex));
-	enemies.push_back(new Spike("resources/spike.png", 800, 600, &spiketex));
-	enemies.push_back(new Saw("resources/saw.png", 880, 600, &sawtex));
 
 }
 
@@ -71,7 +69,6 @@ void Level1::draw(sf::RenderWindow &window) {
 		// t‰ss‰ ei osu mihink‰‰n palikkaan.
 	}
 	else {
-		cout << "GOAAAAAAAAAAAL!";
 		level1finished = true;
 
 	}
@@ -135,8 +132,7 @@ float d = dClock.restart().asSeconds();
 							// jalat osuu maahan*/
 							glassman.stopjump();
 							glassman.setFalling(false);
-							std::cout << top << endl;
-							cout << glassman.top << endl;
+
 
 
 						}
