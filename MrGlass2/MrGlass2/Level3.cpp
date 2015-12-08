@@ -41,10 +41,10 @@ void Level3::loadCollisionMap() {
 
 
 void Level3::init() {
-	glassman.setData("glassman.png", 960, 400, &glassmantex);
+	glassman.setData("glassman.png", 40, 600, &glassmantex);
 	loadCollisionMap();
 	glassman.setFalling(false);
-	goal.setGoalLocation("resources/goal.png", 20, 35, &goaltex);
+	goal.setGoalLocation("resources/goal.png", 950, 631, &goaltex);
 
 	// objektit menee dynaamiseen muistitaulukkoon
 	//	enemies.push_back(new Spike("resources/spike.png", 300, 600, &spiketex));
@@ -52,12 +52,36 @@ void Level3::init() {
 	//enemies.push_back(new Spike("resources/spike.png", 800, 600, &spiketex));
 	//enemies.push_back(new Saw("resources/saw.png", 880, 600, &sawtex));
 	enemies.push_back(new Saw("resources/saw.png", 850, 270, &sawtex));
-	enemies.push_back(new Spike("resources/spike.png", 400, 60, &spiketex));
-	enemies.push_back(new Spike("resources/spike.png", 748, 691, &spiketex));
-	enemies.push_back(new Spike("resources/spike.png", 778, 691, &spiketex));
-	enemies.push_back(new Spike("resources/spike.png", 808, 691, &spiketex));
-	enemies.push_back(new Spike("resources/spike.png", 838, 691, &spiketex));
-	enemies.push_back(new Spike("resources/spike.png", 862, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 271, 121, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 350, 121, &spiketex));
+
+	enemies.push_back(new Spike("resources/spike.png", 475, 210, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 536, 210, &spiketex));
+
+	enemies.push_back(new Spike("resources/spike.png", 268, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 298, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 328, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 358, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 388, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 400, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 425, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 455, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 470, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 500, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 525, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 542, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 560, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 587, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 600, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 625, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 650, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 675, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 700, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 730, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 750, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 777, 691, &spiketex));
+	enemies.push_back(new Spike("resources/spike.png", 800, 691, &spiketex));
+
 }
 
 bool Level3::checkstate() {
