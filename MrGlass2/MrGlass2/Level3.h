@@ -1,7 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "character.h"
-#include "loadTileMap3.h"
+#include "loadTileMap.h"
 #include "Spike.h"
 #include "Enemy.h"
 #include "Saw.h"
@@ -25,7 +25,7 @@ private:
 	Goal goal;														// Goal-luokan goal
 	sf::Texture goaltex;											// Maalin tekstuuri
 	sf::Texture sawtex;												// Sahan tekstuuri
-	LoadTileMap3 lvl3;												// Ykköskentän TileMap
+	LoadTileMap lvl3;												// Ykköskentän TileMap
 	std::vector<Enemy*> enemies;									// Dynaaminen Enemy vektori
 
 	std::vector<std::vector<int>> colMap;

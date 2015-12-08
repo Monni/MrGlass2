@@ -8,18 +8,13 @@
 
 // SFML 2.1 tutorial 51
 int main() {
-	
-
-
 
 	bool playclicked = false;
 	bool level1finished = false;
 	bool level2finished = false;
 	bool level3finished = false;
 
-
 	sf::RenderWindow window(sf::VideoMode(1024, 720), "MrGlass2");
-
 
 	Menu menu(window.getSize().x, window.getSize().y);
 	Level1 level1(window.getSize().x, window.getSize().y);
@@ -74,14 +69,13 @@ int main() {
 				}
 			}
 
-		
 		window.clear();
 	
 		if (!playclicked) {
 			menu.draw(window);
 		}
 		else if (playclicked && !level1finished) {
-			level3.draw(window);
+			level1.draw(window);
 			level1finished = level1.checkstate();
 		}
 		else if (playclicked && level1finished && !level2finished) {

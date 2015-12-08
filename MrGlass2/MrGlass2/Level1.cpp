@@ -20,7 +20,6 @@ void Level1::loadCollisionMap() {
 	colMap.clear();
 	if (openfile.is_open())
 	{
-
 		while (!openfile.eof())
 		{
 			std::string str, value;
@@ -39,14 +38,15 @@ void Level1::loadCollisionMap() {
 	}
 }
 
-
 void Level1::init() {
+	lvl1.setTileFile("map1.txt");
+	lvl1.init();
 	glassman.setData("glassman.png", 70, 540, &glassmantex);
 	loadCollisionMap();
+
+	goal.setGoalLocation("resources/goal.png", 960, 575, &goaltex);
 	
-	goal.setGoalLocation("resources/goal.png", 960, 580, &goaltex);
-	
-	// objektit menee dynaamiseen muistitaulukkoon
+	// objektit menee dynaamisesti vektoriin
 	enemies.push_back(new Spike("resources/spike.png", 300, 600, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 340, 600, &spiketex));
 
@@ -106,7 +106,6 @@ float d = dClock.restart().asSeconds();
 	glassman.Update();
 	isFalling = glassman.checkFalling();
 
-
 	for (int i = 0; i < colMap.size(); i++) {
 
 			for (int j = 0; j < colMap[i].size(); j++) {
@@ -121,28 +120,18 @@ float d = dClock.restart().asSeconds();
 						// tässä ei osu mihinkään palikkaan.
 						glassman.setFalling(true);
 
-
 					}
 
 					else {
 						if (glassman.top + 37 <= top && isFalling) {
-							/*	cout << "top collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
-							<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
-							<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
-							<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
-							// jalat osuu maahan*/
 							glassman.stopjump();
 							glassman.setFalling(false);
-
-
-
 						}
 						
 						else {
 
 							break;
 						}
-					
 				}
 			}
 		}

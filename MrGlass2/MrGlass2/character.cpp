@@ -8,20 +8,6 @@ Character::Character() {}
 
 Character::~Character() {}
 
-/*
-Character::Character(std::string imagename, float x, float y, sf::Texture * tex) {
-
-sf::Image img;
-img.loadFromFile(imagename);
-img.createMaskFromColor(sf::Color::White);
-tex->loadFromImage(img);
-
-this->setSize(sf::Vector2f(18, 39));
-this->setPosition(x, y);
-this->setTexture(tex);
-
-}*/
-
 void Character::Update() {
 	bottom = getPosition().y + getSize().y;
 	left = getPosition().x;
@@ -51,38 +37,36 @@ bool Character::checkFalling() {
 void Character::updateimg(sf::Texture * tex) {
 	sf::err().rdbuf(NULL);
 	if (movingleft) {
-		runningleft.loadFromFile("resources/glassman_left_running.gif");
-		if (!runningleft.loadFromFile("resources/glassman_left_running.gif")) {
+		runningleft.loadFromFile("resources/glassman_left.png");
+		if (!runningleft.loadFromFile("resources/glassman_left.png")) {
 			throw ImgException("Glassman couldn't figure out how to run left!");
 		}
 		tex->loadFromImage(runningleft);
 	}
 	else if (movingright) {
-		runningright.loadFromFile("resources/glassman_right_running.gif");
-		if (!runningright.loadFromFile("resources/glassman_right_running.gif")) {
+		runningright.loadFromFile("resources/glassman.png");
+		if (!runningright.loadFromFile("resources/glassman.png")) {
 			throw ImgException("Glassman couldn't figure out how to run right!");
 		}
 		tex->loadFromImage(runningright);
 	}
 
 	if (lastleft) {
-		standingleft.loadFromFile("resources/glassman_left_standing.gif");
-		if (!runningright.loadFromFile("resources/glassman_left_standing.gif")) {
+		standingleft.loadFromFile("resources/glassman_left.png");
+		if (!runningright.loadFromFile("resources/glassman_left.png")) {
 			throw ImgException("Glassman couldn't figure out how to look left!");
 		}
 		tex->loadFromImage(standingleft);
 	}
 	else if (lastright) {
-		standingright.loadFromFile("resources/glassman_right_standing.gif");
-		if (!runningright.loadFromFile("resources/glassman_right_standing.gif")) {
+		standingright.loadFromFile("resources/glassman.png");
+		if (!runningright.loadFromFile("resources/glassman.png")) {
 			throw ImgException("Glassman couldn't figure out how to look right!");
 		}
 		tex->loadFromImage(standingright);
 	}
 
 }
-
-
 
 void Character::moveLeft() {
 	setPosition(getPosition() + sf::Vector2f(-movespeed, 0));
@@ -126,7 +110,6 @@ void Character::SetMoveSpeed(float siirtyma) {
 	this->maxfallspeed = siirtyma * 2.5;
 }
 
-
 void Character::setFalling(bool falling) {
 	this->isFalling = falling;
 	if (falling == false)
@@ -137,9 +120,7 @@ void Character::FinishReset() {
 	this->movespeed = 0;
 }
 
-
 void Character::checkmovement() {
-
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
 		moveLeft();
@@ -179,9 +160,5 @@ void Character::checkmovement() {
 			fallspeed += jumpreducer;
 		}
 	}
-
-
-
-
 
 }

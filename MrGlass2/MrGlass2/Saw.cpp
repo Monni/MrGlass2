@@ -19,8 +19,6 @@ Saw::Saw(std::string imagename, float x, float y, sf::Texture * tex) {
 
 Saw::~Saw() {}
 
-
-
 void Saw::draw(sf::RenderWindow & window) {
 	window.draw(*this);
 	std::cout << "sadfasfsaf";

@@ -19,8 +19,6 @@ Spike::Spike(std::string imagename, float x, float y, sf::Texture * tex) {
 
 Spike::~Spike() {}
 
-
-
 void Spike::draw(sf::RenderWindow & window) {
 	window.draw(*this);
 	std::cout << "sadfasfsaf";

@@ -2,11 +2,14 @@
 #include "loadTileMap.h"
 
 LoadTileMap::LoadTileMap() {
-	init();
+}
+
+void LoadTileMap::setTileFile(std::string mapname) {
+	mapFile = mapname;
 }
 
 void LoadTileMap::init() {
-	std::ifstream openfile("map1.txt");
+	std::ifstream openfile(mapFile);
 
 	if (openfile.is_open())
 	{

@@ -42,15 +42,13 @@ void Level2::loadCollisionMap() {
 
 void Level2::init() {
 	glassman.setData("glassman.png", 960, 618, &glassmantex);
+	lvl2.setTileFile("map2.txt");
+	lvl2.init();
 	loadCollisionMap();
 	glassman.setFalling(false);
 	goal.setGoalLocation("resources/goal.png", 20, 35, &goaltex);
 
-	// objektit menee dynaamiseen muistitaulukkoon
-//	enemies.push_back(new Spike("resources/spike.png", 300, 600, &spiketex));
-	//enemies.push_back(new Spike("resources/spike.png", 340, 600, &spiketex));
-	//enemies.push_back(new Spike("resources/spike.png", 800, 600, &spiketex));
-	//enemies.push_back(new Saw("resources/saw.png", 880, 600, &sawtex));
+	// objektit menee dynaamisesti vektoriin
 	enemies.push_back(new Saw("resources/saw.png", 850, 270, &sawtex));
 	enemies.push_back(new Spike("resources/spike.png", 400, 60, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 748, 691, &spiketex));
@@ -100,7 +98,6 @@ void Level2::draw(sf::RenderWindow &window) {
 	}
 	catch (ImgException ex) { cout << ex.getMessage() << endl; }
 
-
 	// Pelinopeus FPS:stä riippumaton vakio
 	float d = dClock.restart().asSeconds();
 	float siirtyma = d * GAME_SPEED;
@@ -108,7 +105,6 @@ void Level2::draw(sf::RenderWindow &window) {
 
 	glassman.Update();
 	isFalling = glassman.checkFalling();
-
 
 	for (int i = 0; i < colMap.size(); i++) {
 
@@ -124,7 +120,6 @@ void Level2::draw(sf::RenderWindow &window) {
 				if (glassman.right < left || glassman.left > right || glassman.top > bottom || glassman.bottom < top) {
 					// tässä ei osu mihinkään palikkaan.
 					glassman.setFalling(true);
-				
 
 				}
 
@@ -133,10 +128,7 @@ void Level2::draw(sf::RenderWindow &window) {
 						glassman.stopjump();
 						glassman.setFalling(false);
 
-					
-
 					}
-
 
 					else {
 
