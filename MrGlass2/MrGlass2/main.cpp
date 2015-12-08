@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Menu.h"
 #include "Level1.h"
+#include "Level2.h"
 
 
 
@@ -12,6 +13,8 @@ int main() {
 
 
 	bool playclicked = false;
+	bool level1finished = false;
+	bool level2finished = false;
 
 
 	sf::RenderWindow window(sf::VideoMode(1024, 720), "MrGlass2");
@@ -19,6 +22,7 @@ int main() {
 
 	Menu menu(window.getSize().x, window.getSize().y);
 	Level1 level1(window.getSize().x, window.getSize().y);
+	Level2 level2(window.getSize().x, window.getSize().y);
 
 	while (window.isOpen()) {
 		sf::Event event;
@@ -70,14 +74,20 @@ int main() {
 
 		
 		window.clear();
-
+	
 		if (!playclicked) {
 			menu.draw(window);
 		}
-		else if (playclicked) {
+		else if (playclicked && !level1finished) {
 
 			level1.draw(window);
-
+			level1finished = level1.checkstate();
+			std::cout << level1finished << std::endl;
+		
+		}
+		else if (playclicked && level1finished && !level2finished) {
+			level2.draw(window);
+			level2.checkstate();
 		}
 
 		window.display();

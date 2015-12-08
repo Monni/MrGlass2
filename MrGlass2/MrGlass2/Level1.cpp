@@ -54,6 +54,13 @@ void Level1::init() {
 
 }
 
+bool Level1::checkstate() {
+	if (level1finished) {
+		return true;
+	}
+	else return false;
+}
+
 void Level1::draw(sf::RenderWindow &window) {
 	lvl1.Draw(window);
 	window.draw(glassman);
@@ -63,7 +70,11 @@ void Level1::draw(sf::RenderWindow &window) {
 	if (goal.right < glassman.left || goal.left > glassman.right || goal.top > glassman.bottom || goal.bottom < glassman.top) {
 		// tässä ei osu mihinkään palikkaan.
 	}
-	else {	cout << "GOAAAAAAAAAAAL!";}
+	else {
+		cout << "GOAAAAAAAAAAAL!";
+		level1finished = true;
+
+	}
 
 	//Piirto looppi vektorille
 	for (std::vector<Enemy*>::iterator it = enemies.begin(); it != enemies.end(); it++){
