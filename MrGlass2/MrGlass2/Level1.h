@@ -25,9 +25,9 @@ private:
 	sf::Texture goaltex;											// Maalin tekstuuri
 	sf::Texture sawtex;												// Sahan tekstuuri
 	LoadTileMap lvl1;												// Ykköskentän TileMap
-	
 	std::vector<Enemy*> enemies;									// Dynaaminen Enemy vektori
-	std::vector<Enemy> enemies2;
+	bool topcol;
+	bool aircol;
 	std::vector<std::vector<int>> colMap;
 	sf::Clock dClock;												// dClock FPS:stä riippumaton peliaika
 	sf::Font font;

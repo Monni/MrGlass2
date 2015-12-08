@@ -17,4 +17,5 @@ void Enemy::update() {
 
 void Enemy::draw(sf::RenderWindow & window) {
 	window.draw(*this);
+	std::cout << "TULEE TÄNNE ENEMY DRAWIIN!";
 }
