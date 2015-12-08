@@ -127,7 +127,7 @@ float d = dClock.restart().asSeconds();
 					}
 
 					else {
-						if (glassman.top <= top && isFalling) {
+						if (glassman.top + 37 <= top && isFalling) {
 							/*	cout << "top collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
 							<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
 							<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
