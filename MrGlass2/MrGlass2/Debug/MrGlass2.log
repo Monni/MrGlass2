@@ -1,7 +1,35 @@
-﻿Build started 8.12.2015 12:19:02.
-     1>Project "D:\Glassman2\MrGlass2\MrGlass2\MrGlass2\MrGlass2.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Glassman2\MrGlass2\MrGlass2\Debug\MrGlass2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Glassman2\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"D:\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"C:\SFML-2.3.2\lib" /LIBPATH:"Z:\SFML-32\SFML-2.3.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Glassman2\MrGlass2\MrGlass2\Debug\MrGlass2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Glassman2\MrGlass2\MrGlass2\Debug\MrGlass2.lib" /MACHINE:X86 Debug\character.obj
+﻿Build started 8.12.2015 14:07:10.
+     1>Project "D:\MrGlass2\MrGlass2\MrGlass2\MrGlass2\MrGlass2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"D:\MrGlass2\MrGlass2\SFML-32\SFML-2.3.2\include" /I"D:\MrGlass2\SFML-32\SFML-2.3.2\include" /I"C:\SFML-2.3.2\include" /I"Z:\SFML-32\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt character.cpp Enemy.cpp goal.cpp ImgException.cpp Level1.cpp Level2.cpp loadTileMap.cpp loadTileMap2.cpp main.cpp Menu.cpp Saw.cpp Spike.cpp
+         Spike.cpp
+         Saw.cpp
+         Menu.cpp
+         main.cpp
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\main.cpp(23): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\main.cpp(24): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\main.cpp(25): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+         loadTileMap2.cpp
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\loadtilemap2.cpp(46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+         loadTileMap.cpp
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\loadtilemap.cpp(47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+         Level2.cpp
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\level2.cpp(81): warning C4018: '<': signed/unsigned mismatch
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\level2.cpp(108): warning C4018: '<': signed/unsigned mismatch
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\level2.cpp(110): warning C4018: '<': signed/unsigned mismatch
+         Level1.cpp
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\level1.cpp(85): warning C4018: '<': signed/unsigned mismatch
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\level1.cpp(111): warning C4018: '<': signed/unsigned mismatch
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\level1.cpp(113): warning C4018: '<': signed/unsigned mismatch
+         ImgException.cpp
+         goal.cpp
+         Enemy.cpp
+         character.cpp
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\character.cpp(124): warning C4305: '=': truncation from 'double' to 'float'
+     1>d:\mrglass2\mrglass2\mrglass2\mrglass2\character.cpp(126): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MrGlass2\MrGlass2\MrGlass2\Debug\MrGlass2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\MrGlass2\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"D:\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"C:\SFML-2.3.2\lib" /LIBPATH:"Z:\SFML-32\SFML-2.3.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\MrGlass2\MrGlass2\MrGlass2\Debug\MrGlass2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MrGlass2\MrGlass2\MrGlass2\Debug\MrGlass2.lib" /MACHINE:X86 Debug\character.obj
          Debug\Enemy.obj
          Debug\goal.obj
          Debug\ImgException.obj
@@ -13,9 +41,10 @@
          Debug\Menu.obj
          Debug\Saw.obj
          Debug\Spike.obj
-         MrGlass2.vcxproj -> D:\Glassman2\MrGlass2\MrGlass2\Debug\MrGlass2.exe
-     1>Done Building Project "D:\Glassman2\MrGlass2\MrGlass2\MrGlass2\MrGlass2.vcxproj" (Build target(s)).
+         LINK : D:\MrGlass2\MrGlass2\MrGlass2\Debug\MrGlass2.exe not found or not built by the last incremental link; performing full link
+         MrGlass2.vcxproj -> D:\MrGlass2\MrGlass2\MrGlass2\Debug\MrGlass2.exe
+     1>Done Building Project "D:\MrGlass2\MrGlass2\MrGlass2\MrGlass2\MrGlass2.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.37
+Time Elapsed 00:00:07.00

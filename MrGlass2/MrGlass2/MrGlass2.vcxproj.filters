@@ -91,5 +91,11 @@
     <Text Include="colmap1.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="colmap2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="map2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

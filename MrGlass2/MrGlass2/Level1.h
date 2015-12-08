@@ -34,4 +34,5 @@ private:
 	sf::Font font;
 	const float GAME_SPEED = 200.0f;								// Peliaikavakio
 	bool level1finished = false;									// P‰‰stess‰ maaliin muutetaan trueksi ja l‰hetet‰‰n menulle, mik‰ vaihtaa piirrett‰v‰n mapin.
+	bool isFalling = false;
 };

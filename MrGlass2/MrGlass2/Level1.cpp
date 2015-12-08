@@ -106,6 +106,7 @@ float d = dClock.restart().asSeconds();
 	glassman.SetMoveSpeed(siirtyma);
 
 	glassman.Update();
+	isFalling = glassman.checkFalling();
 
 
 	for (int i = 0; i < colMap.size(); i++) {
@@ -121,53 +122,25 @@ float d = dClock.restart().asSeconds();
 					if (glassman.right < left || glassman.left > right || glassman.top > bottom || glassman.bottom < top) {
 						// t‰ss‰ ei osu mihink‰‰n palikkaan.
 						glassman.setFalling(true);
-						topcol = true;
+
 
 					}
 
 					else {
-						if (glassman.top <= top && top) {
-						/*	cout << "top collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
-								<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
-								<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
-								<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+						if (glassman.top <= top && isFalling) {
+							/*	cout << "top collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
+							<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
+							<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
+							<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
 							// jalat osuu maahan*/
 							glassman.stopjump();
 							glassman.setFalling(false);
-							topcol = false;
+							std::cout << top << endl;
+							cout << glassman.top << endl;
+
 
 						}
-						else if (glassman.bottom > bottom) {
-							//p‰‰ osuu kattoon
-
-
-							/*cout << "bottom collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
-								<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
-								<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
-								<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
-								*/
-						}
-						if (topcol) {
-							if (glassman.right > right) {
-								//glassmanin vasen reuna osuu sein‰n oikeaan reunaan
-								std::cout << "righti";
-
-								/*cout << "right collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
-									<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
-									<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
-									<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
-	*/
-							}
-							else if (glassman.left < left) {
-								std::cout << "lefti";
-								/*	cout << "left collision" << endl << "Glassman right = " << glassman.right << endl << "Right = " << right
-										<< endl << "Glassman left = " << glassman.left << endl << "Left = " << left
-										<< endl << "Glassman Bottom = " << glassman.bottom << endl << "Bottom = " << bottom
-										<< endl << "Glassman Top = " << glassman.top << endl << "Top = " << top << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
-									//glassmanin oikea reuna osuu sein‰n vasempaan reunaan*/
-
-							}
-						}
+						
 						else {
 
 							break;
