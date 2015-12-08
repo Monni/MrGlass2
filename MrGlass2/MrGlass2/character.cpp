@@ -41,6 +41,13 @@ void Character::setData(std::string imagename, float x, float y, sf::Texture * t
 
 }
 
+bool Character::checkFalling() {
+	if (this->fallspeed >= 0) {
+		return true;
+	}
+	else return false;
+}
+
 void Character::updateimg(sf::Texture * tex) {
 	sf::err().rdbuf(NULL);
 	if (movingleft) {

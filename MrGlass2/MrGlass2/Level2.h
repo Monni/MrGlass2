@@ -27,11 +27,11 @@ private:
 	sf::Texture sawtex;												// Sahan tekstuuri
 	LoadTileMap2 lvl2;												// Ykköskentän TileMap
 	std::vector<Enemy*> enemies;									// Dynaaminen Enemy vektori
-	bool topcol;
-	bool aircol;
+
 	std::vector<std::vector<int>> colMap;
 	sf::Clock dClock;												// dClock FPS:stä riippumaton peliaika
 	sf::Font font;
 	const float GAME_SPEED = 200.0f;								// Peliaikavakio
 	bool level2finished = false;									// Päästessä maaliin muutetaan trueksi ja lähetetään menulle, mikä vaihtaa piirrettävän mapin.
+	bool isFalling = false;
 };
