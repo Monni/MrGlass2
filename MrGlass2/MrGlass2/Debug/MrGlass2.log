@@ -1,14 +1,17 @@
-﻿Build started 08/12/2015 21:24:48.
+﻿Build started 08/12/2015 22:36:38.
      1>Project "C:\Users\Olli\Documents\GitHub\MrGlass2\MrGlass2\MrGlass2\MrGlass2.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Ohjelmat\VisualStudio2015\VC\bin\CL.exe /c /I"D:\MrGlass2\MrGlass2\SFML-32\SFML-2.3.2\include" /I"D:\MrGlass2\SFML-32\SFML-2.3.2\include" /I"C:\SFML-2.3.2\include" /I"Z:\SFML-32\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ImgException.cpp Level1.cpp Level2.cpp Level3.cpp Menu.cpp Saw.cpp Spike.cpp character.cpp main.cpp
-         character.cpp
-     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\character.cpp(107): warning C4305: '=': truncation from 'double' to 'float'
-     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\character.cpp(108): warning C4305: '=': truncation from 'double' to 'float'
-     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\character.cpp(109): warning C4305: '=': truncation from 'double' to 'float'
-     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\character.cpp(110): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         C:\Ohjelmat\VisualStudio2015\VC\bin\CL.exe /c /I"D:\MrGlass2\MrGlass2\SFML-32\SFML-2.3.2\include" /I"D:\MrGlass2\SFML-32\SFML-2.3.2\include" /I"C:\SFML-2.3.2\include" /I"Z:\SFML-32\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Enemy.cpp ImgException.cpp Level1.cpp Level2.cpp Level3.cpp Saw.cpp Spike.cpp main.cpp
+         Enemy.cpp
+         Generating Code...
+         Compiling...
+         main.cpp
+     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\main.cpp(19): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\main.cpp(20): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\main.cpp(21): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\main.cpp(22): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+         Spike.cpp
          Saw.cpp
-         Menu.cpp
          Level3.cpp
      1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\level3.cpp(104): warning C4018: '<': signed/unsigned mismatch
      1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\level3.cpp(129): warning C4018: '<': signed/unsigned mismatch
@@ -21,17 +24,9 @@
      1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\level1.cpp(80): warning C4018: '<': signed/unsigned mismatch
      1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\level1.cpp(106): warning C4018: '<': signed/unsigned mismatch
      1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\level1.cpp(108): warning C4018: '<': signed/unsigned mismatch
-         ImgException.cpp
-         Generating Code...
-         Compiling...
-         main.cpp
-     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\main.cpp(19): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\main.cpp(20): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\main.cpp(21): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-     1>c:\users\olli\documents\github\mrglass2\mrglass2\mrglass2\main.cpp(22): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
          Generating Code...
          Skipping... (no relevant changes detected)
-         Spike.cpp
+         ImgException.cpp
        Link:
          C:\Ohjelmat\VisualStudio2015\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Olli\Documents\GitHub\MrGlass2\MrGlass2\Debug\MrGlass2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\MrGlass2\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"D:\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"C:\SFML-2.3.2\lib" /LIBPATH:"Z:\SFML-32\SFML-2.3.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Olli\Documents\GitHub\MrGlass2\MrGlass2\Debug\MrGlass2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Olli\Documents\GitHub\MrGlass2\MrGlass2\Debug\MrGlass2.lib" /MACHINE:X86 Debug\character.obj
          Debug\Enemy.obj
@@ -50,4 +45,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:06.09
+Time Elapsed 00:00:04.84

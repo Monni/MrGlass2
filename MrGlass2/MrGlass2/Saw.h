@@ -8,13 +8,8 @@ public:
 	Saw();															// Oletuskonstruktori
 	Saw(std::string, float, float, sf::Texture *);					// Konstruktori
 	~Saw();															// Destruktori
-	void update();													// P‰ivitt‰‰ olion sijainnin
-	void draw(sf::RenderWindow &window);							// Olio piirtopinnalle
-	void setEnemyData(std::string, float, float, sf::Texture *);	// Olion attribuuttien m‰‰ritys
 
 private:
-
 	float y;														// Olion y-koordinaatti
 	float x;														// Olion x-koordinaatti
-	float movespeed = 1;											// Olion liikenopeus
 };

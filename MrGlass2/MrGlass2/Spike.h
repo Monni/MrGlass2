@@ -8,9 +8,6 @@ public:
 	Spike();														// Oletuskonstruktori
 	Spike(std::string, float, float, sf::Texture *);				// Overload-konstruktori
 	~Spike();														// Destruktori
-	void update();													// Olion sijainnin p‰ivitys
-	void draw(sf::RenderWindow &window);							// Olio piirtopinnalle
-	void setEnemyData(std::string, float, float, sf::Texture *);	// Olion attribuuttien m‰‰ritys
 
 private:
 	float y;														// Olion y-koordinaatti
