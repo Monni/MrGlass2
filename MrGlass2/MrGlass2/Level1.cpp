@@ -41,10 +41,10 @@ void Level1::loadCollisionMap() {
 
 
 void Level1::init() {
-	glassman.setData("glassman.png", 100, 200, &glassmantex);
+	glassman.setData("glassman.png", 70, 540, &glassmantex);
 	loadCollisionMap();
 	
-	goal.setGoalLocation("resources/goal.png", 960, 570, &goaltex);
+	goal.setGoalLocation("resources/goal.png", 960, 580, &goaltex);
 	
 	// objektit menee dynaamiseen muistitaulukkoon
 	enemies.push_back(new Spike("resources/spike.png", 300, 600, &spiketex));
@@ -69,6 +69,7 @@ void Level1::draw(sf::RenderWindow &window) {
 		// t‰ss‰ ei osu mihink‰‰n palikkaan.
 	}
 	else {
+		glassman.FinishReset();
 		level1finished = true;
 
 	}

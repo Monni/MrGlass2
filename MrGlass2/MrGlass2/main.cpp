@@ -3,7 +3,7 @@
 #include "Menu.h"
 #include "Level1.h"
 #include "Level2.h"
-
+#include "Level3.h"
 
 
 // SFML 2.1 tutorial 51
@@ -15,6 +15,7 @@ int main() {
 	bool playclicked = false;
 	bool level1finished = false;
 	bool level2finished = false;
+	bool level3finished = false;
 
 
 	sf::RenderWindow window(sf::VideoMode(1024, 720), "MrGlass2");
@@ -23,6 +24,7 @@ int main() {
 	Menu menu(window.getSize().x, window.getSize().y);
 	Level1 level1(window.getSize().x, window.getSize().y);
 	Level2 level2(window.getSize().x, window.getSize().y);
+	Level3 level3(window.getSize().x, window.getSize().y);
 
 	while (window.isOpen()) {
 		sf::Event event;
@@ -79,14 +81,16 @@ int main() {
 			menu.draw(window);
 		}
 		else if (playclicked && !level1finished) {
-
-			level2.draw(window);
+			level1.draw(window);
 			level1finished = level1.checkstate();
-		
 		}
 		else if (playclicked && level1finished && !level2finished) {
 			level2.draw(window);
-			level2.checkstate();
+			level2finished = level2.checkstate();
+		}
+		else if (playclicked && level1finished && level2finished && !level3finished) {
+			level3.draw(window);
+			level3finished = level3.checkstate();
 		}
 
 		window.display();

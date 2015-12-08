@@ -120,9 +120,9 @@ void Character::shatter() {
 }
 
 void Character::SetMoveSpeed(float siirtyma) {
-	this->movespeed = siirtyma;
-	this->jumpspeed = -siirtyma * 2;
-	this->jumpreducer = siirtyma / 250;
+	this->movespeed = 0.28;
+	this->jumpspeed = -0.35 * 1.5;
+	this->jumpreducer = 0.3 / 250;
 	this->maxfallspeed = siirtyma * 2.5;
 }
 
@@ -134,7 +134,7 @@ void Character::setFalling(bool falling) {
 }
 
 void Character::FinishReset() {
-	this->fallspeed = 0;
+	this->movespeed = 0;
 }
 
 

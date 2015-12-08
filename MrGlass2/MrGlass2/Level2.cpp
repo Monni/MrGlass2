@@ -41,7 +41,7 @@ void Level2::loadCollisionMap() {
 
 
 void Level2::init() {
-	glassman.setData("glassman.png", 960, 400, &glassmantex);
+	glassman.setData("glassman.png", 960, 618, &glassmantex);
 	loadCollisionMap();
 	glassman.setFalling(false);
 	goal.setGoalLocation("resources/goal.png", 20, 35, &goaltex);
@@ -74,7 +74,6 @@ void Level2::draw(sf::RenderWindow &window) {
 		// t‰ss‰ ei osu mihink‰‰n palikkaan.
 	}
 	else {
-		cout << "GOAAAAAAAAAAAL!";
 		level2finished = true;
 	}
 
