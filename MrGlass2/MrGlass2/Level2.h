@@ -16,6 +16,7 @@ public:
 	void loadCollisionMap();										// Ladataan collisionit
 	bool checkstate();												// L‰hetet‰‰n menulle tieto, onko pelaaja maalissa
 
+
 private:
 	sf::Texture glassmantex;										// Glassmanin tekstuuri
 	Character glassman;												// Character-luokan glassman

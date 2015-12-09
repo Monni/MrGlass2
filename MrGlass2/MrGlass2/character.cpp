@@ -104,9 +104,9 @@ void Character::shatter() {
 }
 
 void Character::SetMoveSpeed(float siirtyma) {
-	this->movespeed = 0.28;
-	this->jumpspeed = -0.35 * 1.5;
-	this->jumpreducer = 0.3 / 250;
+	this->movespeed = 0.45;
+	this->jumpspeed = -0.45 * 1.5;
+	this->jumpreducer = 0.56 / 250;
 	this->maxfallspeed = siirtyma * 2.5;
 }
 
