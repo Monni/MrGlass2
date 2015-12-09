@@ -45,6 +45,9 @@ void Level3::init() {
 	goal.setGoalLocation("resources/goal.png", 950, 631, &goaltex);
 
 	// objektit menee dynaamisesti vektoriin
+	enemies.push_back(new Saw("resources/saw.png", 250, 270, &sawtex));
+	enemies.push_back(new Saw("resources/saw.png", 850, 390, &sawtex));
+	enemies.push_back(new Saw("resources/saw.png", 750, 390, &sawtex));
 	enemies.push_back(new Spike("resources/spike.png", 271, 121, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 350, 121, &spiketex));
 
@@ -53,7 +56,7 @@ void Level3::init() {
 
 	enemies.push_back(new Spike("resources/spike.png", 441, 270, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 415, 270, &spiketex));
-	enemies.push_back(new Saw("resources/saw.png", 340, 270, &sawtex));
+
 
 	enemies.push_back(new Spike("resources/spike.png", 600, 390, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 625, 390, &spiketex));
@@ -109,6 +112,11 @@ void Level3::draw(sf::RenderWindow &window) {
 		window.draw(*(*it));
 
 	}
+
+	// sahojen liikuttaminen
+	enemies[0]->move();
+	enemies[1]->move();
+	enemies[2]->move();
 	//Collisionin tarkistus vihollisille
 	for (int i = 0; i < enemies.size(); i++) {
 

@@ -19,7 +19,7 @@ void Enemy::draw(sf::RenderWindow & window) {
 	std::cout << "TULEE TÄNNE ENEMY DRAWIIN!";
 }
 
-/*void Enemy::move() {
+void Enemy::move() {
 	if (moveOrNot == 1) {
 	if (movespeed > 0) {
 	range++;
@@ -38,4 +38,4 @@ void Enemy::draw(sf::RenderWindow & window) {
 	}
 	}
 	}
-}*/
+}

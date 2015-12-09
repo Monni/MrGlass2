@@ -46,7 +46,7 @@ void Level2::init() {
 	goal.setGoalLocation("resources/goal.png", 20, 35, &goaltex);
 
 	// objektit menee dynaamisesti vektoriin
-	enemies.push_back(new Saw("resources/saw.png", 850, 270, &sawtex));
+	enemies.push_back(new Saw("resources/saw.png", 790, 270, &sawtex));
 	enemies.push_back(new Spike("resources/spike.png", 400, 60, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 748, 691, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 778, 691, &spiketex));
@@ -77,6 +77,8 @@ void Level2::draw(sf::RenderWindow &window) {
 		window.draw(*(*it));
 
 	}
+	// sahojen liikuttaminen
+	enemies[0]->move();
 	//Collisionin tarkistus vihollisille
 	for (int i = 0; i < enemies.size(); i++) {
 

@@ -62,6 +62,8 @@ void Level1::draw(sf::RenderWindow &window) {
 	window.draw(goal);
 	// Goal collision
 	goal.update();
+	cout << glassman.y << endl;
+
 	if (goal.right < glassman.left || goal.left > glassman.right || goal.top > glassman.bottom || goal.bottom < glassman.top) {
 		// tässä ei osu mihinkään palikkaan.
 	}
