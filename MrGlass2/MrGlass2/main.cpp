@@ -75,7 +75,7 @@ int main() {
 			menu.draw(window);
 		}
 		else if (playclicked && !level1finished) {
-			level3.draw(window);
+			level1.draw(window);
 			level1finished = level1.checkstate();
 		}
 		else if (playclicked && level1finished && !level2finished) {
