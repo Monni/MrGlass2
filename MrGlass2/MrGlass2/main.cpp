@@ -13,6 +13,9 @@ int main() {
 	bool level1finished = false;
 	bool level2finished = false;
 	bool level3finished = false;
+	bool score1started = false;
+	bool score2started = false;
+	bool score3started = false;
 
 	sf::RenderWindow window(sf::VideoMode(1024, 720), "MrGlass2");
 
@@ -75,14 +78,28 @@ int main() {
 			menu.draw(window);
 		}
 		else if (playclicked && !level1finished) {
+			if (!score1started) {
+				level1.startScorecounter();
+				score1started = true;
+			}
 			level1.draw(window);
 			level1finished = level1.checkstate();
 		}
 		else if (playclicked && level1finished && !level2finished) {
+			if (!score2started) {
+				level1.stopScorecounter();
+				level2.startScorecounter();
+				score2started = true;
+			}
 			level2.draw(window);
 			level2finished = level2.checkstate();
 		}
 		else if (playclicked && level1finished && level2finished && !level3finished) {
+			if (!score3started) {
+				level2.stopScorecounter();
+				level3.startScorecounter();
+				score3started = true;
+			}
 			level3.draw(window);
 			level3finished = level3.checkstate();
 		}

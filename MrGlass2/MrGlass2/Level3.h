@@ -15,6 +15,9 @@ public:
 	void init();													// Luo pelaajahahmon ja muut objektit piirtopinnalle
 	void loadCollisionMap();										// Ladataan collisionit
 	bool checkstate();												// L‰hetet‰‰n menulle tieto, onko pelaaja maalissa
+	void startScorecounter();
+	void stopScorecounter();
+	void saveScore();
 
 private:
 	sf::Texture glassmantex;										// Glassmanin tekstuuri
@@ -32,4 +35,6 @@ private:
 	const float GAME_SPEED = 200.0f;								// Peliaikavakio
 	bool level3finished = false;									// P‰‰stess‰ maaliin muutetaan trueksi ja l‰hetet‰‰n menulle, mik‰ vaihtaa piirrett‰v‰n mapin.
 	bool isFalling = false;
+	int currentscore;
+	int scorewaiter = 0;
 };

@@ -89,6 +89,41 @@ void Level3::init() {
 
 }
 
+void Level3::startScorecounter() {
+	ifstream scorefile;
+	scorefile.open("score.dat");
+	if (scorefile.is_open()) {
+		while (!scorefile.eof()) {
+			scorefile >> this->currentscore;
+		}
+	}
+	else cout << "Cannot open score.dat!" << endl;
+	scorefile.close();
+}
+
+void Level3::stopScorecounter() {
+	ofstream scorefile;
+	scorefile.open("score.dat", ios::trunc);
+	scorefile << this->currentscore;
+	scorefile.close();
+}
+
+void Level3::saveScore() {
+	int number_of_lines = 1;
+	string line;
+	ifstream scorefile_load;
+	scorefile_load.open("gamescores.dat");
+	while (std::getline(scorefile_load, line)) {
+		number_of_lines++;
+	}
+	scorefile_load.close();
+
+	ofstream scorefile;
+	scorefile.open("gamescores.dat", ios::app);
+	scorefile << "Pelikerran " << number_of_lines << " Pisteet: " << this->currentscore << endl;
+	scorefile.close();
+}
+
 bool Level3::checkstate() {
 	return level3finished;
 }
@@ -99,17 +134,25 @@ void Level3::draw(sf::RenderWindow &window) {
 	window.draw(goal);
 	// Goal collision
 	goal.update();
+	if (scorewaiter <= 501)	scorewaiter++;
 
 	//Level Reset
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
 		glassman.notShattered();
 		glassman.setPosition(40, 600);
+		if (scorewaiter >= 500) {
+			this->currentscore--;
+			cout << currentscore << endl;
+			scorewaiter = 0;
+		}
 	}
 
 	if (goal.right < glassman.left || goal.left > glassman.right || goal.top > glassman.bottom || goal.bottom < glassman.top) {
 		// tässä ei osu mihinkään palikkaan.
 	}
 	else {
+		stopScorecounter();
+		saveScore();
 		level3finished = true;
 		window.close();
 	}

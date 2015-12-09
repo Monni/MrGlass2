@@ -2,6 +2,7 @@
 #include "character.h"
 #include <sstream>
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -56,17 +57,40 @@ bool Level1::checkstate() {
 	else return false;
 }
 
+void Level1::startScorecounter() {
+	ofstream scorefile;
+	scorefile.open("score.dat", ios::trunc);
+	scorefile << ("100");
+	scorefile.close();
+	this->currentscore = 100;
+}
+
+void Level1::stopScorecounter() {
+	ofstream scorefile;
+	scorefile.open("score.dat", ios::trunc);
+	scorefile << this->currentscore;
+	scorefile.close();
+}
+
 void Level1::draw(sf::RenderWindow &window) {
 	lvl1.Draw(window);
 	window.draw(glassman);
 	window.draw(goal);
 	// Goal collision
 	goal.update();
+	if (scorewaiter <= 501)	scorewaiter++;
+
 
 	//Level Reset
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
 		glassman.notShattered();
 		glassman.setPosition(70, 540);
+		if (scorewaiter >= 500) {
+			this->currentscore--;
+			cout << currentscore << endl;
+			scorewaiter = 0;
+		}
+
 	}
 
 	if (goal.right < glassman.left || goal.left > glassman.right || goal.top > glassman.bottom || goal.bottom < glassman.top) {

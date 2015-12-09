@@ -2,6 +2,7 @@
 #include "character.h"
 #include <sstream>
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -55,6 +56,25 @@ void Level2::init() {
 	enemies.push_back(new Spike("resources/spike.png", 862, 691, &spiketex));
 }
 
+void Level2::startScorecounter() {
+	ifstream scorefile;
+	scorefile.open("score.dat");
+	if (scorefile.is_open()) {
+		while (!scorefile.eof()) {
+			scorefile >> this->currentscore;
+		}
+	}
+	else cout << "Cannot open score.dat!" << endl;
+	scorefile.close();
+}
+
+void Level2::stopScorecounter() {
+	ofstream scorefile;
+	scorefile.open("score.dat", ios::trunc);
+	scorefile << this->currentscore;
+	scorefile.close();
+}
+
 bool Level2::checkstate() {
 	return level2finished;
 }
@@ -65,11 +85,17 @@ void Level2::draw(sf::RenderWindow &window) {
 	window.draw(goal);
 	// Goal collision
 	goal.update();
+	if (scorewaiter <= 501)	scorewaiter++;
 
 	//Level Reset
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
 		glassman.notShattered();
 		glassman.setPosition(960, 618);
+		if (scorewaiter >= 500) {
+			currentscore--;
+			cout << currentscore << endl;
+			scorewaiter = 0;
+		}
 	}
 
 	if (goal.right < glassman.left || goal.left > glassman.right || goal.top > glassman.bottom || goal.bottom < glassman.top) {

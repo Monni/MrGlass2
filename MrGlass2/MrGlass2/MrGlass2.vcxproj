@@ -157,6 +157,10 @@
     <Text Include="map2.txt" />
     <Text Include="map3.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="gamescores.dat" />
+    <None Include="score.dat" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
