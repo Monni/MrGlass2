@@ -1,23 +1,41 @@
-﻿Build started 9.12.2015 13:17:15.
+﻿Build started 9.12.2015 13:32:23.
      1>Project "Z:\MrGlass2\MrGlass2\MrGlass2\MrGlass2.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"Z:\MrGlass2\SFML-32\SFML-2.3.2\include" /I"D:\MrGlass2\MrGlass2\SFML-32\SFML-2.3.2\include" /I"D:\MrGlass2\SFML-32\SFML-2.3.2\include" /I"C:\SFML-2.3.2\include" /I"Z:\SFML-32\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Level1.cpp Level2.cpp Level3.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"Z:\MrGlass2\SFML-32\SFML-2.3.2\include" /I"D:\MrGlass2\MrGlass2\SFML-32\SFML-2.3.2\include" /I"D:\MrGlass2\SFML-32\SFML-2.3.2\include" /I"C:\SFML-2.3.2\include" /I"Z:\SFML-32\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Enemy.cpp ImgException.cpp Level1.cpp Level2.cpp Level3.cpp Saw.cpp Spike.cpp main.cpp
+         Enemy.cpp
+     1>z:\mrglass2\mrglass2\mrglass2\enemy.h(16): warning C4305: 'initializing': truncation from 'double' to 'float'
+     1>z:\mrglass2\mrglass2\mrglass2\enemy.cpp(28): warning C4305: '=': truncation from 'double' to 'float'
+     1>z:\mrglass2\mrglass2\mrglass2\enemy.cpp(36): warning C4305: '=': truncation from 'double' to 'float'
+         Generating Code...
+         Compiling...
+         main.cpp
+     1>z:\mrglass2\mrglass2\mrglass2\enemy.h(16): warning C4305: 'initializing': truncation from 'double' to 'float'
+     1>z:\mrglass2\mrglass2\mrglass2\main.cpp(22): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+     1>z:\mrglass2\mrglass2\mrglass2\main.cpp(23): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+     1>z:\mrglass2\mrglass2\mrglass2\main.cpp(24): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+     1>z:\mrglass2\mrglass2\mrglass2\main.cpp(25): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+         Spike.cpp
+     1>z:\mrglass2\mrglass2\mrglass2\enemy.h(16): warning C4305: 'initializing': truncation from 'double' to 'float'
+         Saw.cpp
+     1>z:\mrglass2\mrglass2\mrglass2\enemy.h(16): warning C4305: 'initializing': truncation from 'double' to 'float'
          Level3.cpp
-     1>z:\mrglass2\mrglass2\mrglass2\enemy.h(17): warning C4305: 'initializing': truncation from 'double' to 'float'
+     1>z:\mrglass2\mrglass2\mrglass2\enemy.h(16): warning C4305: 'initializing': truncation from 'double' to 'float'
      1>z:\mrglass2\mrglass2\mrglass2\level3.cpp(171): warning C4018: '<': signed/unsigned mismatch
      1>z:\mrglass2\mrglass2\mrglass2\level3.cpp(196): warning C4018: '<': signed/unsigned mismatch
      1>z:\mrglass2\mrglass2\mrglass2\level3.cpp(198): warning C4018: '<': signed/unsigned mismatch
          Level2.cpp
-     1>z:\mrglass2\mrglass2\mrglass2\enemy.h(17): warning C4305: 'initializing': truncation from 'double' to 'float'
+     1>z:\mrglass2\mrglass2\mrglass2\enemy.h(16): warning C4305: 'initializing': truncation from 'double' to 'float'
      1>z:\mrglass2\mrglass2\mrglass2\level2.cpp(116): warning C4018: '<': signed/unsigned mismatch
      1>z:\mrglass2\mrglass2\mrglass2\level2.cpp(141): warning C4018: '<': signed/unsigned mismatch
      1>z:\mrglass2\mrglass2\mrglass2\level2.cpp(143): warning C4018: '<': signed/unsigned mismatch
          Level1.cpp
-     1>z:\mrglass2\mrglass2\mrglass2\enemy.h(17): warning C4305: 'initializing': truncation from 'double' to 'float'
+     1>z:\mrglass2\mrglass2\mrglass2\enemy.h(16): warning C4305: 'initializing': truncation from 'double' to 'float'
      1>z:\mrglass2\mrglass2\mrglass2\level1.cpp(111): warning C4018: '<': signed/unsigned mismatch
      1>z:\mrglass2\mrglass2\mrglass2\level1.cpp(137): warning C4018: '<': signed/unsigned mismatch
      1>z:\mrglass2\mrglass2\mrglass2\level1.cpp(139): warning C4018: '<': signed/unsigned mismatch
          Generating Code...
+         Skipping... (no relevant changes detected)
+         ImgException.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Z:\MrGlass2\MrGlass2\Debug\MrGlass2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"Z:\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"D:\MrGlass2\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"D:\MrGlass2\SFML-32\SFML-2.3.2\lib" /LIBPATH:"C:\SFML-2.3.2\lib" /LIBPATH:"Z:\SFML-32\SFML-2.3.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"Z:\MrGlass2\MrGlass2\Debug\MrGlass2.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Z:\MrGlass2\MrGlass2\Debug\MrGlass2.lib" /MACHINE:X86 Debug\character.obj
          Debug\Enemy.obj
@@ -36,4 +54,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:06.44
+Time Elapsed 00:00:09.22

@@ -20,7 +20,7 @@ void Enemy::draw(sf::RenderWindow & window) {
 }
 
 void Enemy::move() {
-	if (moveOrNot == 1) {
+
 	if (movespeed > 0) {
 	range++;
 	setPosition(getPosition() + sf::Vector2f(movespeed, 0));
@@ -35,7 +35,6 @@ void Enemy::move() {
 	if (range > 1000) {
 	movespeed = 0.1;
 	range = 0;
-	}
 	}
 	}
 }

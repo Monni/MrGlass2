@@ -12,7 +12,6 @@ public:
 	void move();
 
 private:
-	int moveOrNot = 1;
 	int range = 0;
 	float movespeed = 0.1;
 	float y;													// Olion y-koordinaatti
