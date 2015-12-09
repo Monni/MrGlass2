@@ -103,6 +103,11 @@ void Character::shatter() {
 	this->isCollisible = false;
 }
 
+void Character::notShattered() {
+	this->isJumping = false;
+	this->isCollisible = true;
+}
+
 void Character::SetMoveSpeed(float siirtyma) {
 	this->movespeed = 0.45;
 	this->jumpspeed = -0.45 * 1.5;

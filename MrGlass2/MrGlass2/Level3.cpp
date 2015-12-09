@@ -99,6 +99,13 @@ void Level3::draw(sf::RenderWindow &window) {
 	window.draw(goal);
 	// Goal collision
 	goal.update();
+
+	//Level Reset
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
+		glassman.notShattered();
+		glassman.setPosition(40, 600);
+	}
+
 	if (goal.right < glassman.left || goal.left > glassman.right || goal.top > glassman.bottom || goal.bottom < glassman.top) {
 		// tässä ei osu mihinkään palikkaan.
 	}
