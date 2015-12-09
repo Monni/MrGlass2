@@ -45,7 +45,6 @@ void Level3::init() {
 	goal.setGoalLocation("resources/goal.png", 950, 631, &goaltex);
 
 	// objektit menee dynaamisesti vektoriin
-	enemies.push_back(new Saw("resources/saw.png", 850, 270, &sawtex));
 	enemies.push_back(new Spike("resources/spike.png", 271, 121, &spiketex));
 	enemies.push_back(new Spike("resources/spike.png", 350, 121, &spiketex));
 
