@@ -27,11 +27,11 @@ private:
 	sf::Texture sawtex;												// Sahan tekstuuri
 	LoadTileMap lvl1;												// Ykköskentän TileMap
 	std::vector<Enemy*> enemies;									// Dynaaminen Enemy vektori
-	std::vector<std::vector<int>> colMap;
+	std::vector<std::vector<int>> colMap;							// Collisionmap vektori
 	sf::Clock dClock;												// dClock FPS:stä riippumaton peliaika
 	const float GAME_SPEED = 200.0f;								// Peliaikavakio
 	bool level1finished = false;									// Päästessä maaliin muutetaan trueksi ja lähetetään menulle, mikä vaihtaa piirrettävän mapin.
-	bool isFalling = false;
-	int currentscore;
-	int scorewaiter = 0;
+	bool isFalling = false;											// Tarkistetaan putoaako pelaaja collisionia varten, tallennetaan tähän
+	int currentscore;												// Pistelaskurin nykyinen tila
+	int scorewaiter = 0;											// Odotuttaa pistelaskurin vähennystä
 };

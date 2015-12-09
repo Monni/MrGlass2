@@ -12,7 +12,7 @@ public:
 	~LoadTileMap();											// Destruktori
 	void Draw(sf::RenderWindow &window);					// TileMap piirtopinnalle
 	void init();											// Hakee tiedoston, asettaa ensimmäisen rivin hakemaan spritesheet, lukee sprithesheetilta tilet
-	void setTileFile(std::string);										// Asettaa map filen
+	void setTileFile(std::string);							// Asettaa map filen
 
 private:
 	std::string mapFile;

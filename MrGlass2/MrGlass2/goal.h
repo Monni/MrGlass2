@@ -7,7 +7,7 @@ public:
 	Goal();																// Oletuskonstruktori
 	~Goal();															// Destruktori
 	void update();														// Olion sijainnin p‰ivitys
-	float bottom, top, left, right;										
+	float bottom, top, left, right;										// Maalin rajat collisionia varten
 	void draw(sf::RenderWindow &window);								// Olio piirtopinnalle
 	void setGoalLocation(std::string, float, float, sf::Texture *);		// Olion attribuutien m‰‰ritys(kuva, x ja y sijainti, tekstuuri)
 

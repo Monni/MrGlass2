@@ -22,9 +22,9 @@ public:
 	void SetMoveSpeed(float);									// Antaa glassmanin liikkeille pelinopeuden mukaisen nopeuden, FPS:sta riippumatta.
 	void setFalling(bool);										// Kutsutaan hypyn loputtua lopettaakseen putoaminen ja aloittaakseen uusi putoamisnopeuslaskuri
 	void shatter();												// Kutsutaan kun halutaan hajottaa glassman
-	void notShattered();
-	bool checkFalling();
-	void FinishReset();
+	void notShattered();										// Palautetaan pelaajan "ehj‰ksi"
+	bool checkFalling();										// Tarkistetaan putoaako pelaaja, kent‰n alal‰pihyppy‰ varten
+	void FinishReset();											// Pys‰ytt‰‰ pelaajan hetkeksi maalissa
 
 protected:
 private:
